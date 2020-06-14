@@ -1,0 +1,11 @@
+.arrow-icon {
+  font-size:19px;
+  width:34px;
+  height:34px;
+
+  background: url("../../images/blue-arrow.png") center center no-repeat;
+}
+
+.arrow-icon:hover {
+  background: url("../../images/yellow-arrow.png") center center no-repeat;
+}
