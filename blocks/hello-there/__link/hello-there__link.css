@@ -1,0 +1,9 @@
+.hello-there__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.hello-there__link:hover {
+  color: #ffc124;
+  text-decoration: underline;
+}
