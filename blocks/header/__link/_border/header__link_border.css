@@ -1,0 +1,11 @@
+.header__link_border {
+  border: 2px solid #fff;
+  padding: 10px 16px;
+  border-radius: 30px;
+  margin-top: 30px;
+  transition: border ease-in-out 0.3s;
+}
+
+.header__link_border:hover {
+  border: 2px solid #ffc124;
+}
