@@ -1,0 +1,21 @@
+.content-title {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 22px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content-title {
+    font-size: 31px;
+    padding-bottom: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-title {
+    font-size: 28px;
+    padding-bottom: 12px;
+  }
+}

@@ -1,0 +1,11 @@
+.carousel__nav-label {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__nav-label {
+    font-size: 14px;
+  }
+}

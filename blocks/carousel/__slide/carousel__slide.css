@@ -1,0 +1,27 @@
+.carousel__slide {
+  background-color: #FFC124;
+  border-radius: 10px;
+  height: 210px;
+  max-width: 382px;
+  list-style: none;
+  position: relative;
+  margin-right: 27px;
+}
+
+.carousel__slide:last-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide {
+    height: 166px;
+    margin-right: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide {
+    height: 188px;
+    margin-right: 22px;
+  }
+}
