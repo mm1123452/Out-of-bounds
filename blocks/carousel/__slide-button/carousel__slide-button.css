@@ -1,0 +1,18 @@
+.carousel__slide-button {
+  border: 0;
+  background-color: unset;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 53px;
+  height: 53px;
+  width: 53px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide-button {
+    background-size: 49px;
+    height: 49px;
+    width: 49px;
+  }
+}

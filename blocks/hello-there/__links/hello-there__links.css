@@ -1,0 +1,23 @@
+.hello-there__links {
+  margin: 30px 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@media (min-width: 1024px) {
+  .hello-there__links {
+    margin: 32px 0 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hello-there__links {
+    margin: 34px 0 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

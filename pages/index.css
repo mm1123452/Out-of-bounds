@@ -7,3 +7,9 @@
 @import url(../blocks/header/header.css);
 @import url(../blocks/logo/logo.css);
 @import url(../blocks/logo/_place/logo_place_header.css);
+@import url(../blocks/hello-there/hello-there.css);
+@import url(../blocks/statistics/statistics.css);
+@import url(../blocks/content-title/content-title.css);
+@import url(../blocks/content-subtitle/content-subtitle.css);
+@import url(../blocks/carousel/carousel.css);
+@import url(../blocks/about/about.css);

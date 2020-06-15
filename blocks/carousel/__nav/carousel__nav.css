@@ -1,0 +1,22 @@
+.carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-bottom: 60px;
+  /* border-bottom: 1.7px solid #223D46;; */
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__nav {
+    margin-top: 21px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__nav {
+    margin-top: 17px;
+    padding-bottom: 40px;
+  }
+}
