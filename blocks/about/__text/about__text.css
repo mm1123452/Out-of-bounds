@@ -1,0 +1,29 @@
+.about__text {
+  font-size:20px;
+  line-height:28px;
+  margin: 14px 0 34px;
+}
+
+.about__text:nth-of-type(2) {
+  margin: 9px 0 18px;
+}
+
+.about__text:last-child {
+  margin: 0;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about__text {
+    margin: 15px 0 40px;
+  }
+
+  .about__text:nth-of-type(2) {
+    margin: 0 0 18px;
+  }
+}
+
+@media only screen and (min-width: 1025px)  {
+  .about__text {
+    margin: 4px 0 20px;
+  }
+}
