@@ -1,0 +1,9 @@
+.carousel__track_type_statistics {
+  width: 134%;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__track_type_statistics {
+    width: 200%;
+  }
+}
