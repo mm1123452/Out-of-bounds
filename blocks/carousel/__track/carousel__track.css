@@ -2,32 +2,4 @@
   margin: 0;
   padding: 0;
   display: flex;
-  width: 134%;
 }
-
-@media screen and (max-width: 768px) {
-  .carousel__track {
-    width: 200%;
-  }
-}
-
-/*@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  60% {
-    left: -102%;
-  }
-
-  80% {
-    left: -102%;
-  }
-}
-
-.carousel__track:hover {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-} */

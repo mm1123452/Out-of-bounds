@@ -1,11 +1,8 @@
 .carousel__slide {
   background-color: #FFC124;
   border-radius: 10px;
-  height: 210px;
-  max-width: 382px;
   list-style: none;
   position: relative;
-  margin-right: 27px;
 }
 
 .carousel__slide:last-of-type {

@@ -35,16 +35,28 @@
       <p class="about__text">
         <span class="about__italic-text">Out of Bounds </span>focuses on prevention by showing the children of incarcerated parents that Love and Life have No
         Bounds.</p>
-      <div >
-        <img class="carousel__bg-image" src="./images/image_children.jpg" alt="2 children">
-      </div>
+        <div class="carousel">
+          <div class="carousel__track-container">
+            <ul class="carousel__track carousel__track_type_about">
+              <li class="carousel__slide carousel__slide_type_about">
+                <img class="carousel__bg-image" src="./images/image_children.jpg" alt="2 children">
+              </li>
+              <li class="carousel__slide carousel__slide_type_about">
+                <img class="carousel__bg-image" src="./images/image_children.jpg" alt="2 children">
+              </li>
+              <li class="carousel__slide carousel__slide_type_about">
+                <img class="carousel__bg-image" src="./images/image_children.jpg" alt="2 children">
+              </li>
+            </ul>
+          </div>
       <div class="carousel__nav">
         <div class="carousel__button-wrapper">
           <button class="carousel__slide-button carousel__slide-button_type_prev"></button>
           <p class="carousel__nav-label">prev</p>
         </div>
         <div class="carousel__indicators">
-          <button class="carousel__indicator carousel__indicator_active"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
           <button class="carousel__indicator"></button>
         </div>
         <div class="carousel__button-wrapper">
@@ -52,6 +64,7 @@
           <button class="carousel__slide-button carousel__slide-button_type_next"></button>
         </div>
       </div>
+    </div>
       <p class="about__text">Currently there are an estimated 2.7 million minor children with at least one parent behind bars, and at least
         10 million have experienced parental incarceration at some point in their lives.There is currently a lack of
         support for children of incarcerated parents, which leaves room for cycles to begin and never end. We providing
@@ -65,8 +78,8 @@
       <p class="content-subtitle">It is terrible and unpleasant truth.</p>
       <div class="carousel">
         <div class="carousel__track-container">
-          <ul class="carousel__track">
-            <li class="carousel__slide">
+          <ul class="carousel__track carousel__track_type_statistics">
+            <li class="carousel__slide carousel__slide_type_statistics">
               <img src="./images/dots-background.png" alt="Dots" class="carousel__bg-image">
               <div class="carousel__slide-text-wrapper">
                 <p class="carousel__slide-text">2.7 million minor children with an incarcerated parent in the United
@@ -74,7 +87,7 @@
                 <p class="carousel__slide-source">NCJRS, 2017</p>
               </div>
             </li>
-            <li class="carousel__slide">
+            <li class="carousel__slide carousel__slide_type_statistics">
               <img src="./images/line-background.png" alt="Dots" class="carousel__bg-image">
               <div class="carousel__slide-text-wrapper">
                 <p class="carousel__slide-text">10 million children will have an incarcerated parent in their life time.
@@ -82,7 +95,7 @@
                 <p class="carousel__slide-source">NRCCFI, 2014</p>
               </div>
             </li>
-            <li class="carousel__slide">
+            <li class="carousel__slide carousel__slide_type_statistics">
               <img src="./images/waves-background.png" alt="Dots" class="carousel__bg-image">
               <div class="carousel__slide-text-wrapper">
                 <p class="carousel__slide-text">Children of incarcerated parents are 6 times more likely to enter the
@@ -90,7 +103,7 @@
                 <p class="carousel__slide-source">NCJRS, 2017</p>
               </div>
             </li>
-            <li class="carousel__slide">
+            <li class="carousel__slide carousel__slide_type_statistics">
               <img src="./images/sketch-background.png" alt="Dots" class="carousel__bg-image">
               <div class="carousel__slide-text-wrapper">
                 <p class="carousel__slide-text">59% of state prisoners report no visits with their children.</p>
@@ -105,7 +118,7 @@
             <p class="carousel__nav-label">prev</p>
           </div>
           <div class="carousel__indicators">
-            <button class="carousel__indicator carousel__indicator_active"></button>
+            <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
           </div>
           <div class="carousel__button-wrapper">
@@ -169,7 +182,8 @@
       </ul>
     </section>
   </main>
-  <script src="./scripts/script.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
+  <script type="module" src="./scripts/Carousel.js"></script>
 </body>
 
 </html>
