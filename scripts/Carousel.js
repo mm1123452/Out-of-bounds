@@ -76,7 +76,7 @@ class Carousel {
     }, 8000);
   }
 
-  _createIndecators() {
+  _createIndicators() {
     //Inset indicator buttons to HTML
     const button = [];
     for(let i=0; i<this._numberOfTransitions + 1; i++){
@@ -94,7 +94,7 @@ class Carousel {
     this._size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
     this._numberOfSlides = Math.floor(screen.width / this._size);
     this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
-    this._createIndecators();
+    this._createIndicators();
     const carouselIndecators = this._carouselElement.querySelectorAll('.carousel__indicator');
     carouselIndecators[0].classList.add('carousel__indicator_active');
     carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
