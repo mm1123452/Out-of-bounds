@@ -6,12 +6,12 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .about{
+  .about {
     margin: 84px 40px 0;
   }
 }
 
-@media only screen and (min-width: 1025px)  {
+@media only screen and (min-width: 1025px) {
   .about {
     margin: 100px 40px 0;
   }

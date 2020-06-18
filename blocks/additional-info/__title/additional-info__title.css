@@ -1,20 +1,20 @@
 .additional-info__title {
-  font-size:28px;
-  line-height:28px;
+  font-size: 28px;
+  line-height: 28px;
   margin: 0;
-  font-weight:500;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info__title {
-    font-size:31px;
-    line-height:31px;
+    font-size: 31px;
+    line-height: 31px;
   }
 }
 
-@media only screen and (min-width: 1025px)  {
+@media only screen and (min-width: 1025px) {
   .additional-info__title {
-    font-size:38px;
-    line-height:38px;
+    font-size: 38px;
+    line-height: 38px;
   }
 }
