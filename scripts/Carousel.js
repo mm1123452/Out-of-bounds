@@ -77,7 +77,7 @@ class Carousel {
   }
 
   _createIndicators() {
-    //Inset indicator buttons to HTML
+    //Inset indicator buttons to HTML.
     const button = [];
     for(let i=0; i<this._numberOfTransitions + 1; i++){
       button[i] = document.createElement("BUTTON");
