@@ -3,7 +3,7 @@
   font-size: 28px;
   line-height: 39px;
   font-weight: normal;
-  border: 1.7px solid #499B99;
+  border: 1.7px solid #499b99;
   outline: none;
   display: flex;
   justify-content: center;
@@ -13,12 +13,12 @@
 }
 
 .donations__custom-radio-button:hover {
-  border-color: #FFC124;
+  border-color: #ffc124;
 }
 
 .donations__radio-button:checked + .donations__custom-radio-button {
-  background-color: #FFC124;
-  border-color: #FFC124;
+  background-color: #ffc124;
+  border-color: #ffc124;
 }
 
 @media (max-width: 1024px) {

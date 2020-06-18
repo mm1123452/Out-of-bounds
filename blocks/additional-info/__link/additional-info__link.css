@@ -1,27 +1,26 @@
 .additional-info__link {
-  text-decoration:none;
-  color:#111111;
-  font-size:19px;
-  line-height:19px;
+  text-decoration: none;
+  color: #111111;
+  font-size: 19px;
+  line-height: 19px;
 }
 
 .additional-info__link:hover {
-  text-decoration:underline;
-  text-decoration-color: #FFC124;
-  color:#FFC124;
+  text-decoration: underline;
+  text-decoration-color: #ffc124;
+  color: #ffc124;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info__link {
-    font-size:24px;
-    line-height:34px;
+    font-size: 24px;
+    line-height: 34px;
   }
 }
 
-@media only screen and (min-width: 1025px)  {
+@media only screen and (min-width: 1025px) {
   .additional-info__link {
-    font-size:28px;
-    line-height:39px;
+    font-size: 28px;
+    line-height: 39px;
   }
 }
-

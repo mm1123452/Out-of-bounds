@@ -1,13 +1,13 @@
-@import url('./__text-main/donations__text-main.css');
-@import url('./__text-small/donations__text-small.css');
-@import url('./__link/donations__link.css');
-@import url('./__inputs/donations__inputs.css');
-@import url('./__input/donations__input.css');
-@import url('./__buttons/donations__buttons.css');
-@import url('./__radio-button/donations__radio-button.css');
-@import url('./__custom-radio-button/donations__custom-radio-button.css');
-@import url('./__submit-button/donations__submit-button.css');
-@import url('./__last-radio-option/donations__last-radio-option.css');
+@import url(./__text-main/donations__text-main.css);
+@import url(./__text-small/donations__text-small.css);
+@import url(./__link/donations__link.css);
+@import url(./__inputs/donations__inputs.css);
+@import url(./__input/donations__input.css);
+@import url(./__buttons/donations__buttons.css);
+@import url(./__radio-button/donations__radio-button.css);
+@import url(./__custom-radio-button/donations__custom-radio-button.css);
+@import url(./__submit-button/donations__submit-button.css);
+@import url(./__last-radio-option/donations__last-radio-option.css);
 
 .donations {
   padding: 100px 0 10px 0;

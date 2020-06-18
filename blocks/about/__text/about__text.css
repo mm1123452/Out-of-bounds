@@ -1,6 +1,6 @@
 .about__text {
-  font-size:20px;
-  line-height:28px;
+  font-size: 20px;
+  line-height: 28px;
   margin: 14px 0 34px;
 }
 
@@ -22,7 +22,7 @@
   }
 }
 
-@media only screen and (min-width: 1025px)  {
+@media only screen and (min-width: 1025px) {
   .about__text {
     margin: 4px 0 20px;
   }

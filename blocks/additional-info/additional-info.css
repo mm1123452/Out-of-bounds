@@ -6,20 +6,20 @@
 
 .additional-info {
   margin: 68px 30px 0;
-  border-bottom: 1.7px solid #223D46;
-  padding-bottom:40px;
+  border-bottom: 1.7px solid #223d46;
+  padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info {
-    margin-top:84px;
-    padding-bottom:50px;
+    margin-top: 84px;
+    padding-bottom: 50px;
   }
 }
 
-@media only screen and (min-width: 1025px)  {
+@media only screen and (min-width: 1025px) {
   .additional-info {
-    margin-top:100px;
-    padding-bottom:60px;
+    margin-top: 100px;
+    padding-bottom: 60px;
   }
 }

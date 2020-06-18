@@ -2,19 +2,17 @@
   font-size: 20px;
   line-height: 30px;
   border: none;
-  border-bottom: 1.7px solid #499B99;
+  border-bottom: 1.7px solid #499b99;
   min-width: 100px;
 }
 
 .donations__input:focus {
   outline: none;
-  border-bottom: 1.7px solid #FFC124;
+  border-bottom: 1.7px solid #ffc124;
 }
 
 @media (max-width: 768px) {
-  .donations__input:last-child{
+  .donations__input:last-child {
     grid-column: 1/-1;
   }
 }
-
-
