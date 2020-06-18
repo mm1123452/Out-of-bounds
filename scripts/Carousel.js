@@ -4,18 +4,18 @@ class Carousel {
   }
 
   _changeIndicator(direction) {
-    const carouselIndecators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
     if (direction > 0) {
-      carouselIndecators[this._counter - 1].classList.remove('carousel__indicator_active');
-      carouselIndecators[this._counter].classList.add('carousel__indicator_active');
+      carouselIndicators[this._counter - 1].classList.remove('carousel__indicator_active');
+      carouselIndicators[this._counter].classList.add('carousel__indicator_active');
     }
     if (direction < 0) {
-      carouselIndecators[this._counter + 1].classList.remove('carousel__indicator_active');
-      carouselIndecators[this._counter].classList.add('carousel__indicator_active');
+      carouselIndicators[this._counter + 1].classList.remove('carousel__indicator_active');
+      carouselIndicators[this._counter].classList.add('carousel__indicator_active');
     }
     if (direction === 0) {
-      carouselIndecators[this._counter].classList.remove('carousel__indicator_active');
-      carouselIndecators[0].classList.add('carousel__indicator_active');
+      carouselIndicators[this._counter].classList.remove('carousel__indicator_active');
+      carouselIndicators[0].classList.add('carousel__indicator_active');
     }
   }
 
@@ -95,8 +95,8 @@ class Carousel {
     this._numberOfSlides = Math.floor(screen.width / this._size);
     this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
     this._createIndicators();
-    const carouselIndecators = this._carouselElement.querySelectorAll('.carousel__indicator');
-    carouselIndecators[0].classList.add('carousel__indicator_active');
+    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    carouselIndicators[0].classList.add('carousel__indicator_active');
     carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
   }
 
