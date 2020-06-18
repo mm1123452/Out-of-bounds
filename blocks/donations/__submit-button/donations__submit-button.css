@@ -15,11 +15,6 @@
   margin-bottom: 30px;
 }
 
-.donations__submit-button:hover {
-  cursor: pointer;
-  opacity: .9;
-}
-
 .donations__submit-button_type_inactive {
   background-color: #999;
 }

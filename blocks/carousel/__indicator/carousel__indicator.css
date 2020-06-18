@@ -5,11 +5,18 @@
   height: 6px;
   padding: 0;
   background-color: #DFDFDA;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.carousel__indicator:last-of-type {
+  margin: 0;
 }
 
 @media screen and (max-width: 1024px) {
   .carousel__indicator {
     width: 5px;
     height: 5px;
+    margin-right: 6px;
   }
 }
