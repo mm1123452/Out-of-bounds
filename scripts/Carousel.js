@@ -1,53 +1,55 @@
 class Carousel {
   constructor(carouselElement) {
     this._carouselElement = carouselElement;
-    this._counter = 0;
   }
 
   _changeIndicator(direction) {
-    const carouselIndecators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
     if (direction > 0) {
-      carouselIndecators[this._counter - 1].classList.remove('carousel__indicator_active');
-      carouselIndecators[this._counter].classList.add('carousel__indicator_active');
+      carouselIndicators[this._counter - 1].classList.remove('carousel__indicator_active');
+      carouselIndicators[this._counter].classList.add('carousel__indicator_active');
     }
     if (direction < 0) {
-      carouselIndecators[this._counter + 1].classList.remove('carousel__indicator_active');
-      carouselIndecators[this._counter].classList.add('carousel__indicator_active');
+      carouselIndicators[this._counter + 1].classList.remove('carousel__indicator_active');
+      carouselIndicators[this._counter].classList.add('carousel__indicator_active');
     }
     if (direction === 0) {
-      carouselIndecators[this._counter].classList.remove('carousel__indicator_active');
-      carouselIndecators[0].classList.add('carousel__indicator_active');
+      carouselIndicators[this._counter].classList.remove('carousel__indicator_active');
+      carouselIndicators[0].classList.add('carousel__indicator_active');
     }
   }
 
-  _rotate(direction, carouselTrack, size, numberOfSlides) {
+  _rotate(direction) {
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     carouselTrack.style.transition = "transform 0.6s ease-in-out";
     this._counter += direction;
-    carouselTrack.style.transform = 'translateX(' + ( -size * numberOfSlides * this._counter ) + 'px)';
+    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
     this._changeIndicator(direction);
   }
 
-  _restart(carouselTrack) {
+  _restart() {
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     carouselTrack.style.transition = "transform 0.6s ease-in-out";
     carouselTrack.style.transform = 'translateX(' + 0 + 'px)';
     this._changeIndicator(0);
     this._counter = 0;
   }
 
-  _setEventListeners(carouselTrack, size, numberOfSlides, numberOfTransitions) {
+  _setEventListeners() {
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     const prevButton = this._carouselElement.querySelector('.carousel__slide-button_type_prev');
     const nextButton = this._carouselElement.querySelector('.carousel__slide-button_type_next');
     //Button Listeners
     nextButton.addEventListener('click', () => {
       carouselTrack.style.animationPlayState = "paused";
-      if(this._counter >= numberOfTransitions) { return;}
-      this._rotate(1, carouselTrack, size, numberOfSlides);
+      if(this._counter >= this._numberOfTransitions) { return;}
+      this._rotate(1);
     });
 
     prevButton.addEventListener('click', () => {
       carouselTrack.style.animationPlayState = "paused";
       if(this._counter <= 0) { return; }
-      this._rotate(-1, carouselTrack, size, numberOfSlides);
+      this._rotate(-1);
     });
 
     //Hover Listeners
@@ -60,34 +62,48 @@ class Carousel {
     });
   }
 
-  _interval(carouselTrack, size, numberOfSlides, numberOfTransitions) {
+  _interval() {
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     setInterval(() => {
       if(carouselTrack.style.animationPlayState !== "paused"){
-        if(this._counter >= numberOfTransitions) {
-          this._restart(carouselTrack);
+        if(this._counter >= this._numberOfTransitions) {
+          this._restart();
         }
         else {
-          this._rotate(1, carouselTrack, size, numberOfSlides);
+          this._rotate(1);
         }
       }
     }, 8000);
   }
 
+  _createIndicators() {
+    //Inset indicator buttons to HTML.
+    const button = [];
+    for(let i=0; i<this._numberOfTransitions + 1; i++){
+      button[i] = document.createElement("BUTTON");
+      button[i].classList.add('carousel__indicator');
+      this._carouselElement.querySelector('.carousel__indicators').appendChild(button[i]);
+    }
+  }
 
-  generateCarousel() {
+  _initCarousel() {
     const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     const carouselSlides = this._carouselElement.querySelectorAll('.carousel__slide');
-    const carouselIndecators = this._carouselElement.querySelectorAll('.carousel__indicator');
-    //Constants
+    this._counter = 0;
     const style = getComputedStyle(carouselSlides[0]);
-    const size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
-    const numberOfSlides = Math.floor(screen.width / size);
-    const numberOfTransitions = (carouselSlides.length % numberOfSlides) ? Math.floor(carouselSlides.length / numberOfSlides) : (carouselSlides.length / numberOfSlides - 1);
-    //Init
-    carouselIndecators[0].classList.add('carousel__indicator_active');
-    carouselTrack.style.transform = 'translateX(' + ( -size * numberOfSlides * this._counter ) + 'px)';
-    this._setEventListeners(carouselTrack, size, numberOfSlides, numberOfTransitions);
-    this._interval(carouselTrack, size, numberOfSlides, numberOfTransitions);
+    this._size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
+    this._numberOfSlides = Math.floor(screen.width / this._size);
+    this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
+    this._createIndicators();
+    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    carouselIndicators[0].classList.add('carousel__indicator_active');
+    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+  }
+
+  generateCarousel() {
+    this._initCarousel();
+    this._setEventListeners();
+    this._interval();
   }
 }
 
