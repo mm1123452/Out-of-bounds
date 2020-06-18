@@ -60,6 +60,12 @@ class Carousel {
     carouselTrack.addEventListener("mouseout", () => {
       carouselTrack.style.animationPlayState = "running";
     });
+
+    //Resize screen Listener
+    window.addEventListener('resize', () => {
+      this._setCarousel();
+      carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+    });
   }
 
   _interval() {
@@ -76,7 +82,9 @@ class Carousel {
     }, 8000);
   }
 
-  _createIndicators() {
+  _setIndicators() {
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
+
     //Inset indicator buttons to HTML.
     const button = [];
     for(let i=0; i<this._numberOfTransitions + 1; i++){
@@ -84,27 +92,26 @@ class Carousel {
       button[i].classList.add('carousel__indicator');
       this._carouselElement.querySelector('.carousel__indicators').appendChild(button[i]);
     }
+    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    carouselIndicators[0].classList.add('carousel__indicator_active');
+    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
   }
 
-  _initCarousel() {
-    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
+  _setCarousel() {
     const carouselSlides = this._carouselElement.querySelectorAll('.carousel__slide');
     this._counter = 0;
     const style = getComputedStyle(carouselSlides[0]);
     this._size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
     this._numberOfSlides = Math.floor(screen.width / this._size);
     this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
-    this._createIndicators();
-    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
-    carouselIndicators[0].classList.add('carousel__indicator_active');
-    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
   }
 
   generateCarousel() {
-    this._initCarousel();
+    this._setCarousel();
+    this._setIndicators();
     this._setEventListeners();
     this._interval();
-  }
+  }1
 }
 
 export { Carousel };
