@@ -1,19 +1,12 @@
 .header__link {
   display: inline-block;
   color: #fff;
-  text-decoration: none;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   margin: 40px 0 0 20px;
-  opacity: 1;
   transition: color ease-in-out 0.3s;
-}
-
-.header__link:hover {
-  color: #ffc124;
-  text-decoration: underline;
 }
 
 @media (min-width: 1280px) {

@@ -2,7 +2,6 @@
 @import url(./__text/hello-there__text.css);
 @import url(./__italic-text/hello-there__italic-text.css);
 @import url(./__links/hello-there__links.css);
-@import url(./__link/hello-there__link.css);
 
 .hello-there {
   padding-top: 68px;
