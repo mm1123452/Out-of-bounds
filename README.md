@@ -1,4 +1,4 @@
-# Out of bounds
+# Out of Bounds
 
 ![out of bounds website](https://i.imgur.com/mcqGs4M.png)
 
