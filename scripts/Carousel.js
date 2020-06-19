@@ -35,6 +35,30 @@ class Carousel {
     this._counter = 0;
   }
 
+  _setIndicators() {
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
+
+    //Inset indicator buttons to HTML.
+    const button = [];
+    for(let i=0; i<this._numberOfTransitions + 1; i++){
+      button[i] = document.createElement("BUTTON");
+      button[i].classList.add('carousel__indicator');
+      this._carouselElement.querySelector('.carousel__indicators').appendChild(button[i]);
+    }
+    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    carouselIndicators[0].classList.add('carousel__indicator_active');
+    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+  }
+
+  _setCarousel() {
+    const carouselSlides = this._carouselElement.querySelectorAll('.carousel__slide');
+    this._counter = 0;
+    const style = getComputedStyle(carouselSlides[0]);
+    this._size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
+    this._numberOfSlides = Math.floor(screen.width / this._size);
+    this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
+  }
+
   _setEventListeners() {
     const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     const prevButton = this._carouselElement.querySelector('.carousel__slide-button_type_prev');
@@ -63,9 +87,17 @@ class Carousel {
 
     //Resize screen Listener
     window.addEventListener('resize', () => {
+      //init carousel
       this._setCarousel();
       carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+      //init indicators
+      const indicatorList = Array.from(this._carouselElement.querySelectorAll('.carousel__indicator'));
+      indicatorList.forEach((indicatorElement) => {
+        indicatorElement.remove();
+      });
+      this._setIndicators();
     });
+
   }
 
   _interval() {
@@ -80,30 +112,6 @@ class Carousel {
         }
       }
     }, 8000);
-  }
-
-  _setIndicators() {
-    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
-
-    //Inset indicator buttons to HTML.
-    const button = [];
-    for(let i=0; i<this._numberOfTransitions + 1; i++){
-      button[i] = document.createElement("BUTTON");
-      button[i].classList.add('carousel__indicator');
-      this._carouselElement.querySelector('.carousel__indicators').appendChild(button[i]);
-    }
-    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
-    carouselIndicators[0].classList.add('carousel__indicator_active');
-    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
-  }
-
-  _setCarousel() {
-    const carouselSlides = this._carouselElement.querySelectorAll('.carousel__slide');
-    this._counter = 0;
-    const style = getComputedStyle(carouselSlides[0]);
-    this._size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
-    this._numberOfSlides = Math.floor(screen.width / this._size);
-    this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
   }
 
   generateCarousel() {
