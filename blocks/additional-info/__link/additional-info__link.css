@@ -1,14 +1,6 @@
 .additional-info__link {
-  text-decoration: none;
-  color: #111111;
   font-size: 19px;
   line-height: 19px;
-}
-
-.additional-info__link:hover {
-  text-decoration: underline;
-  text-decoration-color: #ffc124;
-  color: #ffc124;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
