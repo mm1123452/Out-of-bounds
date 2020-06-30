@@ -1,11 +1,8 @@
 .about__text {
   font-size: 20px;
   line-height: 28px;
-  margin: 14px 0 34px;
-}
-
-.about__text:nth-of-type(2) {
-  margin: 9px 0 18px;
+  font-weight: 500;
+  margin: 34px 0 18px;
 }
 
 .about__text:last-child {
@@ -14,16 +11,16 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about__text {
-    margin: 15px 0 40px;
-  }
-
-  .about__text:nth-of-type(2) {
-    margin: 0 0 18px;
+    margin: 40px 0 18px;
+    font-size: 23px;
+    line-height: 31px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .about__text {
-    margin: 4px 0 20px;
+    margin: 45px 0 20px;
+    font-size: 28px;
+    line-height: 39px;
   }
 }
