@@ -15,11 +15,16 @@
   background-image: url(../../images/phone-header-bg.png);
 }
 
+@media (min-width: 425px) {
+  .header {
+    background-image: url(../../images/tablet-header-bg.png);
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     height: 750px;
     border-bottom: 50px solid #429a6b;
-    background-image: url(../../images/tablet-header-bg.png);
   }
 }
 
