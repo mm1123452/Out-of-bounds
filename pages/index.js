@@ -4,9 +4,6 @@ import {
   donateBtn
 } from "../utils/constants.js"
 
-// const carouselList = document.querySelectorAll(".carousel");
-// const donateBtn = document.querySelector(".donations__submit-button");
-
 carouselList.forEach((carouselElement) => {
   const carousel = new Carousel(carouselElement);
   carousel.generateCarousel();
