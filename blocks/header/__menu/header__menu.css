@@ -1,0 +1,21 @@
+.header__menu {
+  background-image: url(../../../images/menu.svg);
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 24px;
+  border: none;
+  margin-top: 30px;
+  background-size: contain;
+}
+
+.header__menu:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+}
