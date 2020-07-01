@@ -1,6 +1,0 @@
-/* this is how width is calculated: slide is 100% of the screen,
-     there are 2 slides, then width=2*100% */
-
-.carousel__track_type_about {
-  width: 200%;
-}

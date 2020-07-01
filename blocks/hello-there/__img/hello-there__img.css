@@ -1,6 +1,13 @@
 .hello-there__img {
-  width: 188px;
-  margin-top: 18px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .hello-there__img {
+    width: 188px;
+    margin-top: 18px;
+  }
 }
 
 @media (min-width: 1024px) {

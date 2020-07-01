@@ -3,7 +3,7 @@
 ![out of bounds website](https://i.imgur.com/mcqGs4M.png)
 
 ## Mission
-*Out of Bounds* is an organization who's mission is to provide support to children of incarcerated parents through support groups and creative coping skill workshops and special bonding projects.
+*Out of Bounds* is an organization whose mission is to provide support to children of incarcerated parents through support groups and creative coping skill workshops and special bonding projects.
 
 This website was created to bring attention to cause, raise awareness of the organization and get donation pledges.
 
@@ -17,4 +17,4 @@ This website was created to bring attention to cause, raise awareness of the org
 * [Mabel] (https://github.com/MabelM1)
 * [Tanya] (https://github.com/tantany)
 * [Julie] (https://github.com/julieg18/)
-* [Mariana] (https://github.com/Av1sa)
+* [Marina] (https://github.com/Av1sa)

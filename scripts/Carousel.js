@@ -3,19 +3,20 @@ class Carousel {
     this._carouselElement = carouselElement;
   }
 
+  //indicators are the dots in the buttom of the carousel
   _changeIndicator(direction) {
-    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
+    const carouselIndicator = this._carouselElement.querySelectorAll('.carousel__indicator');
     if (direction > 0) {
-      carouselIndicators[this._counter - 1].classList.remove('carousel__indicator_active');
-      carouselIndicators[this._counter].classList.add('carousel__indicator_active');
+      carouselIndicator[this._counter - 1].classList.remove('carousel__indicator_active');
+      carouselIndicator[this._counter].classList.add('carousel__indicator_active');
     }
     if (direction < 0) {
-      carouselIndicators[this._counter + 1].classList.remove('carousel__indicator_active');
-      carouselIndicators[this._counter].classList.add('carousel__indicator_active');
+      carouselIndicator[this._counter + 1].classList.remove('carousel__indicator_active');
+      carouselIndicator[this._counter].classList.add('carousel__indicator_active');
     }
     if (direction === 0) {
-      carouselIndicators[this._counter].classList.remove('carousel__indicator_active');
-      carouselIndicators[0].classList.add('carousel__indicator_active');
+      carouselIndicator[this._counter].classList.remove('carousel__indicator_active');
+      carouselIndicator[0].classList.add('carousel__indicator_active');
     }
   }
 
@@ -23,7 +24,7 @@ class Carousel {
     const carouselTrack = this._carouselElement.querySelector('.carousel__track');
     carouselTrack.style.transition = "transform 0.6s ease-in-out";
     this._counter += direction;
-    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+    carouselTrack.style.transform = 'translateX(' + ( -this._sizeOfSlide * this._numberOfSlidesPerPage * this._counter ) + 'px)';
     this._changeIndicator(direction);
   }
 
@@ -35,28 +36,53 @@ class Carousel {
     this._counter = 0;
   }
 
+  //indicators are the dots in the buttom of the carousel
   _setIndicators() {
     const carouselTrack = this._carouselElement.querySelector('.carousel__track');
+    const carouselIndicators = this._carouselElement.querySelector('.carousel__indicators');
 
-    //Inset indicator buttons to HTML.
     const button = [];
-    for(let i=0; i<this._numberOfTransitions + 1; i++){
+    for(let i=0; i < this._numberOfTransitions + 1; i++){
       button[i] = document.createElement("BUTTON");
       button[i].classList.add('carousel__indicator');
-      this._carouselElement.querySelector('.carousel__indicators').appendChild(button[i]);
+      carouselIndicators.appendChild(button[i]);
     }
-    const carouselIndicators = this._carouselElement.querySelectorAll('.carousel__indicator');
-    carouselIndicators[0].classList.add('carousel__indicator_active');
-    carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+
+    // new const "carouselIndicator" is created which contains all the new indicators created in the for loop
+    const carouselIndicator = this._carouselElement.querySelectorAll('.carousel__indicator');
+
+    carouselIndicator[0].classList.add('carousel__indicator_active');
+    carouselTrack.style.transform = 'translateX(' + ( -this._sizeOfSlide * this._numberOfSlidesPerPage * this._counter ) + 'px)';
   }
 
   _setCarousel() {
     const carouselSlides = this._carouselElement.querySelectorAll('.carousel__slide');
+    const carouselTrack = this._carouselElement.querySelector('.carousel__track');
+
     this._counter = 0;
-    const style = getComputedStyle(carouselSlides[0]);
-    this._size = carouselSlides[0].clientWidth + parseInt(style.getPropertyValue('margin-right'), 10);
-    this._numberOfSlides = Math.floor(screen.width / this._size);
-    this._numberOfTransitions = (carouselSlides.length % this._numberOfSlides) ? Math.floor(carouselSlides.length / this._numberOfSlides) : (carouselSlides.length / this._numberOfSlides - 1);
+
+    if(carouselTrack.classList.contains('carousel__track_type_statistics')) {
+      if(screen.width > 768) {
+        this._numberOfSlidesPerPage = 3;
+      }
+      else if(screen.width <= 768 && screen.width > 425) {
+        this._numberOfSlidesPerPage = 2;
+      }
+      else {
+        this._numberOfSlidesPerPage = 1;
+      }
+    }
+    else {
+      this._numberOfSlidesPerPage = 1;
+    }
+    const numOfSlides = carouselSlides.length;
+
+    this._numberOfTransitions = Math.ceil(numOfSlides / this._numberOfSlidesPerPage) - 1;
+    this._slidePersentageOutOfScreen = (1 / this._numberOfSlidesPerPage) * 100;
+    const carouselOverflowWidth = Math.ceil(this._slidePersentageOutOfScreen * carouselSlides.length);
+    carouselTrack.style.width = carouselOverflowWidth + "%";
+    const carouselSlidesStyle = getComputedStyle(carouselSlides[0]);
+    this._sizeOfSlide = carouselSlides[0].clientWidth + parseInt(carouselSlidesStyle.getPropertyValue('margin-right'), 10);
   }
 
   _setEventListeners() {
@@ -89,7 +115,7 @@ class Carousel {
     window.addEventListener('resize', () => {
       //init carousel
       this._setCarousel();
-      carouselTrack.style.transform = 'translateX(' + ( -this._size * this._numberOfSlides * this._counter ) + 'px)';
+      carouselTrack.style.transform = 'translateX(' + ( -this._sizeOfSlide * this._numberOfSlides * this._counter ) + 'px)';
       //init indicators
       const indicatorList = Array.from(this._carouselElement.querySelectorAll('.carousel__indicator'));
       indicatorList.forEach((indicatorElement) => {
@@ -102,6 +128,7 @@ class Carousel {
 
   _interval() {
     const carouselTrack = this._carouselElement.querySelector('.carousel__track');
+
     setInterval(() => {
       if(carouselTrack.style.animationPlayState !== "paused"){
         if(this._counter >= this._numberOfTransitions) {
@@ -119,7 +146,7 @@ class Carousel {
     this._setIndicators();
     this._setEventListeners();
     this._interval();
-  }1
+  }
 }
 
 export { Carousel };
