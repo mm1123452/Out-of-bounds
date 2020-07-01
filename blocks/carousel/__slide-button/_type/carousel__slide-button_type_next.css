@@ -9,3 +9,15 @@
     margin-left: 25px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .carousel__slide-button_type_next {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__slide-button_type_next {
+    margin-left: 10px;
+  }
+}
