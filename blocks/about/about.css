@@ -1,18 +1,20 @@
 @import url(./__text/about__text.css);
 @import url(./__italic-text/about__italic-text.css);
+/* Modifiers */
+@import url(./__text/_type/about__text_type_subtitle.css);
 
 .about {
-  margin: 68px 30px 0;
+  padding: 68px 30px 0;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about {
-    margin: 84px 40px 0;
+    padding: 84px 40px 0;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .about {
-    margin: 100px 40px 0;
+    padding: 100px 40px 0;
   }
 }
