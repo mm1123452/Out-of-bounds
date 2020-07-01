@@ -34,7 +34,7 @@ class Carousel {
     this._counter = 0;
   }
 
-  //indicators are the dots in the buttom of the carousel
+  // indicators are the dots in the buttom of the carousel
   _setIndicators() {
     const carouselIndicatorContainer = this._carouselElement.querySelector('.carousel__indicator-container');
 
