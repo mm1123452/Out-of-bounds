@@ -21,15 +21,15 @@ class Carousel {
   }
 
   _rotate(direction) {
-    this._carouselTrack.style.transition = "transform 0.6s ease-in-out";
+    this._carouselTrack.style.transition = 'transform 0.6s ease-in-out';
     this._counter += direction;
-    this._carouselTrack.style.transform = 'translateX(' + ( -this._sizeOfSlide * this._numberOfSlidesPerPage * this._counter ) + 'px)';
+    this._carouselTrack.style.transform = `translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlidesPerPage * this._counter }px)`;
     this._changeIndicator(direction);
   }
 
   _restart() {
-    this._carouselTrack.style.transition = "transform 0.6s ease-in-out";
-    this._carouselTrack.style.transform = 'translateX(' + 0 + 'px)';
+    this._carouselTrack.style.transition = 'transform 0.6s ease-in-out';
+    this._carouselTrack.style.transform = 'translateX(0px)';
     this._changeIndicator(0);
     this._counter = 0;
   }
@@ -40,7 +40,7 @@ class Carousel {
 
     const button = [];
     for(let i=0; i < this._numberOfTransitions + 1; i++){
-      button[i] = document.createElement("BUTTON");
+      button[i] = document.createElement('BUTTON');
       button[i].classList.add('carousel__indicator');
       carouselIndicatorContainer.appendChild(button[i]);
     }
@@ -49,7 +49,7 @@ class Carousel {
     const carouselIndicator = this._carouselElement.querySelectorAll('.carousel__indicator');
 
     carouselIndicator[0].classList.add('carousel__indicator_active');
-    this._carouselTrack.style.transform = 'translateX(' + ( -this._sizeOfSlide * this._numberOfSlidesPerPage * this._counter ) + 'px)';
+    this._carouselTrack.style.transform = `translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlidesPerPage * this._counter }px)`;
   }
 
   _setCarousel() {
@@ -61,12 +61,15 @@ class Carousel {
     if(this._carouselTrack.classList.contains('carousel__track_type_statistics')) {
       if(screen.width > 768) {
         this._numberOfSlidesPerPage = 3;
+        this.addPixelFlag = 0;
       }
       else if(screen.width <= 768 && screen.width > 425) {
         this._numberOfSlidesPerPage = 2;
+        this.addPixelFlag = 0;
       }
       else {
         this._numberOfSlidesPerPage = 1;
+        this.addPixelFlag = 2; // this flag exists to enable 2px border between slides, to distinguish between them
       }
     }
     else {
@@ -77,7 +80,7 @@ class Carousel {
     const slidePersentageOutOfScreen = (1 / this._numberOfSlidesPerPage) * 100;
     const carouselOverflowWidth = Math.ceil(slidePersentageOutOfScreen * carouselSlides.length);
 
-    this._carouselTrack.style.width = carouselOverflowWidth + "%";
+    this._carouselTrack.style.width = carouselOverflowWidth + '%';
 
     const carouselSlidesStyle = getComputedStyle(carouselSlides[0]);
     this._sizeOfSlide = carouselSlides[0].clientWidth + parseInt(carouselSlidesStyle.getPropertyValue('margin-right'), 10);
@@ -88,31 +91,31 @@ class Carousel {
     const nextButton = this._carouselElement.querySelector('.carousel__slide-button_type_next');
     //Button Listeners
     nextButton.addEventListener('click', () => {
-      this._carouselTrack.style.animationPlayState = "paused";
+      this._carouselTrack.style.animationPlayState = 'paused';
       if(this._counter >= this._numberOfTransitions) { return;}
       this._rotate(1);
     });
 
     prevButton.addEventListener('click', () => {
-      this._carouselTrack.style.animationPlayState = "paused";
+      this._carouselTrack.style.animationPlayState = 'paused';
       if(this._counter <= 0) { return; }
       this._rotate(-1);
     });
 
     //Hover Listeners
-    this._carouselTrack.addEventListener("mouseover", () => {
-      this._carouselTrack.style.animationPlayState = "paused";
+    this._carouselTrack.addEventListener('mouseover', () => {
+      this._carouselTrack.style.animationPlayState = 'paused';
     });
 
-    this._carouselTrack.addEventListener("mouseout", () => {
-      this._carouselTrack.style.animationPlayState = "running";
+    this._carouselTrack.addEventListener('mouseout', () => {
+      this._carouselTrack.style.animationPlayState = 'running';
     });
 
     //Resize screen Listener
     window.addEventListener('resize', () => {
       //init carousel
       this._setCarousel();
-      this._carouselTrack.style.transform = 'translateX(' + ( -this._sizeOfSlide * this._numberOfSlides * this._counter ) + 'px)';
+      this._carouselTrack.style.transform = `translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlides * this._counter }px)`;
       //init indicators
       const indicatorList = Array.from(this._carouselElement.querySelectorAll('.carousel__indicator'));
       indicatorList.forEach((indicatorElement) => {
@@ -125,7 +128,7 @@ class Carousel {
 
   _interval() {
     setInterval(() => {
-      if(this._carouselTrack.style.animationPlayState !== "paused"){
+      if(this._carouselTrack.style.animationPlayState !== 'paused'){
         if(this._counter >= this._numberOfTransitions) {
           this._restart();
         }
