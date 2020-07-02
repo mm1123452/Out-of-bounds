@@ -10,16 +10,31 @@
   padding-bottom: 40px;
 }
 
+@media only screen and (max-width: 320px) {
+  .additional-info {
+    margin: 50px 16px 0;
+    padding-bottom: 30px;
+  }
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info {
-    margin-top: 84px;
+    margin: 84px 40px 0;
     padding-bottom: 50px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .additional-info {
-    margin-top: 100px;
     padding-bottom: 60px;
+    max-width: 1200px;
+    margin: 100px 40px 0;
   }
 }
+
+@media only screen and (min-width: 1280px) {
+  .additional-info {
+    margin: 100px auto 0;
+  }
+}
+

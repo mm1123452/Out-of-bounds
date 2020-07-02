@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+@media only screen and (max-width: 320px) {
+  .additional-info__list {
+    margin: 36px 0 0 0;
+  }
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info__list {
     margin: 40px 0 0 0;
