@@ -23,7 +23,7 @@ class Carousel {
   _rotate(direction) {
     this._carouselTrack.style.transition = 'transform 0.6s ease-in-out';
     this._counter += direction;
-    this._carouselTrack.style.transform = `translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlidesPerPage * this._counter }px)`;
+    this._carouselTrack.style.transform = `translateX(${ -this._sizeOfSlide * this._numberOfSlidesPerPage * this._counter }px)`;
     this._changeIndicator(direction);
   }
 
@@ -49,7 +49,7 @@ class Carousel {
     const carouselIndicator = this._carouselElement.querySelectorAll('.carousel__indicator');
 
     carouselIndicator[0].classList.add('carousel__indicator_active');
-    this._carouselTrack.style.transform = `translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlidesPerPage * this._counter }px)`;
+    this._carouselTrack.style.transform = `translateX(${ -this._sizeOfSlide * this._numberOfSlidesPerPage * this._counter }px)`;
   }
 
   _setCarousel() {
@@ -74,6 +74,7 @@ class Carousel {
     }
     else {
       this._numberOfSlidesPerPage = 1;
+      this.addPixelFlag = 0;
     }
     const numOfSlides = carouselSlides.length;
     this._numberOfTransitions = Math.ceil(numOfSlides / this._numberOfSlidesPerPage) - 1;
@@ -83,7 +84,7 @@ class Carousel {
     this._carouselTrack.style.width = carouselOverflowWidth + '%';
 
     const carouselSlidesStyle = getComputedStyle(carouselSlides[0]);
-    this._sizeOfSlide = carouselSlides[0].clientWidth + parseInt(carouselSlidesStyle.getPropertyValue('margin-right'), 10);
+    this._sizeOfSlide = carouselSlides[0].clientWidth + parseInt(carouselSlidesStyle.getPropertyValue('margin-right'), 10) + this.addPixelFlag;
   }
 
   _setEventListeners() {
@@ -115,7 +116,8 @@ class Carousel {
     window.addEventListener('resize', () => {
       //init carousel
       this._setCarousel();
-      this._carouselTrack.style.transform = `translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlides * this._counter }px)`;
+      console.log(`translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlides * this._counter }px)`);
+      this._carouselTrack.style.transform = `translateX(${ -this._sizeOfSlide * this._numberOfSlides * this._counter }px)`;
       //init indicators
       const indicatorList = Array.from(this._carouselElement.querySelectorAll('.carousel__indicator'));
       indicatorList.forEach((indicatorElement) => {
