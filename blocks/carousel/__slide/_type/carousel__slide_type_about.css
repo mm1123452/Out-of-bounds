@@ -1,4 +1,23 @@
 .carousel__slide_type_about {
   width: 1200px;
   height: 660px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide_type_about {
+    height: 520px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide_type_about {
+    height: 390px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__slide_type_about {
+    height: 180px;
+  }
 }
