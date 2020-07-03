@@ -16,3 +16,19 @@
     width: 49px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .carousel__slide-button {
+    background-size: 45px;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__slide-button {
+    background-size: 36px;
+    height: 36px;
+    width: 36px;
+  }
+}

@@ -45,8 +45,6 @@
         <div class="carousel">
           <div class="carousel__track-container">
             <ul class="carousel__track carousel__track_type_about">
-              <!-- if you add new slides to the carousel, don't forget to update
-                   the width in the carousel__track_type_about.css file -->
               <li class="carousel__slide carousel__slide_type_about">
                 <img
                   class="carousel__bg-image"
@@ -91,7 +89,7 @@
               ></button>
               <p class="carousel__nav-label">prev</p>
             </div>
-            <div class="carousel__indicators">
+            <div class="carousel__indicator-container">
               <!-- this div will be filled with as many needed indicator buttons with the help of Carousel.js script -->
             </div>
             <div class="carousel__button-wrapper">
@@ -181,14 +179,14 @@
               </li>
             </ul>
           </div>
-          <div class="carousel__nav">
+          <div class="carousel__nav carousel__nav_type_statistics">
             <div class="carousel__button-wrapper">
               <button
                 class="carousel__slide-button carousel__slide-button_type_prev hover-button"
               ></button>
               <p class="carousel__nav-label">prev</p>
             </div>
-            <div class="carousel__indicators">
+            <div class="carousel__indicator-container">
               <!-- this div will be filled with as many needed indicator buttons with the help of Carousel.js script -->
             </div>
             <div class="carousel__button-wrapper">
@@ -393,7 +391,8 @@
         <p class="footer__text">Made by Students of Yandex.Practicum</p>
       </section>
     </main>
-    <script type="module" src="./scripts/script.js"></script>
-    <script type="module" src="./scripts/Carousel.js"></script>
+    <script type="module" src="./pages/index.js"></script>
+    <script type="module" src="./components/Carousel.js"></script>
+    <script type="module" src="./utils/constants.js"></script>
   </body>
 </html>
