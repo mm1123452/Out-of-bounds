@@ -1,4 +1,4 @@
-import { Carousel } from '../components/Carousel.js';
+import Carousel from '../components/Carousel.js';
 import {
   carouselList,
   donateBtn

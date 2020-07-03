@@ -116,7 +116,6 @@ class Carousel {
     window.addEventListener('resize', () => {
       //init carousel
       this._setCarousel();
-      console.log(`translateX(${ -(this._sizeOfSlide + this.addPixelFlag) * this._numberOfSlides * this._counter }px)`);
       this._carouselTrack.style.transform = `translateX(${ -this._sizeOfSlide * this._numberOfSlides * this._counter }px)`;
       //init indicators
       const indicatorList = Array.from(this._carouselElement.querySelectorAll('.carousel__indicator'));
@@ -149,4 +148,4 @@ class Carousel {
   }
 }
 
-export { Carousel };
+export default Carousel;
