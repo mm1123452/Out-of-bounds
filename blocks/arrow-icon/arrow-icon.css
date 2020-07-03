@@ -1,18 +1,40 @@
 .arrow-icon {
-  font-size: 19px;
-  width: 34px;
-  height: 34px;
-  background: url("./blue-arrow.png") center center no-repeat;
+  width: 43px;
+  height: 19px;
+  background: url("./blue-arrow.png") center right no-repeat;
+  background-size: 11px 11px;
 }
 
 .arrow-icon:hover {
-  background: url("./yellow-arrow.png") center center no-repeat;
+  background: url("./yellow-arrow.png") center right no-repeat;
+  background-size: 11px 11px;
 }
 
 @media only screen and  (max-width: 320px) {
   .arrow-icon {
-    font-size: 14px;
     width: 26px;
     height: 22px;
+    background-size: 8px 8px;
+  }
+
+  .arrow-icon:hover {
+    width: 26px;
+    height: 22px;
+    background-size: 8px 8px;
   }
 }
+
+@media only screen and  (min-width: 1280px) {
+  .arrow-icon {
+    width: 61px;
+    height: 39px;
+    background-size: 16px 16px;
+  }
+
+  .arrow-icon:hover {
+    width: 61px;
+    height: 39px;
+    background-size: 16px 16px;
+  }
+}
+

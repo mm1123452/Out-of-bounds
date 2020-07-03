@@ -1,40 +1,40 @@
-@import url(./__title/additional-info__title.css);
-@import url(./__subtitle/additional-info__subtitle.css);
 @import url(./__list/additional-info__list.css);
 @import url(./__list-item/additional-info__list-item.css);
 @import url(./__link/additional-info__link.css);
 
 .additional-info {
-  margin: 68px 30px 0;
   border-bottom: 1.7px solid #223d46;
-  padding-bottom: 40px;
+  padding: 68px 0 40px;
+  margin: 0 30px;
 }
 
 @media only screen and (max-width: 320px) {
   .additional-info {
-    margin: 50px 16px 0;
-    padding-bottom: 30px;
+    margin: 0 16px 0;
+    padding: 50px 0 30px;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info {
-    margin: 84px 40px 0;
-    padding-bottom: 50px;
+    padding: 84px 0 50px;
+    margin: 0 40px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .additional-info {
-    padding-bottom: 60px;
+    padding: 100px 0 60px;
     max-width: 1200px;
-    margin: 100px 40px 0;
+    margin: 0 40px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .additional-info {
-    margin: 100px auto 0;
+   margin: 0 auto;
   }
 }
+
+
 

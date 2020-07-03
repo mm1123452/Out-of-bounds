@@ -1,6 +1,7 @@
 .additional-info__link {
   font-size: 19px;
   line-height: 19px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 320px) {

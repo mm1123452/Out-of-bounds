@@ -1,23 +1,20 @@
 .additional-info__list {
-  margin: 49px 0 0 0;
+  margin: 0;
   list-style-type: none;
   padding: 0;
 }
 
 @media only screen and (max-width: 320px) {
   .additional-info__list {
-    margin: 36px 0 0 0;
+    margin: 0;
+    padding-top:10px;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .additional-info__list {
-    margin: 40px 0 0 0;
+    margin: 0;
+    padding-top: 4px;
   }
 }
 
-@media only screen and (min-width: 1025px) {
-  .additional-info__list {
-    margin: 45px 0 0 0;
-  }
-}
