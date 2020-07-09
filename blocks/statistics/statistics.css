@@ -1,5 +1,7 @@
 .statistics {
   padding: 100px 40px 0;
+  max-width: 1200px;
+  margin: auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -11,5 +13,11 @@
 @media screen and (max-width: 768px) {
   .statistics {
     padding: 68px 30px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .statistics {
+    padding: 50px 16px 0;
   }
 }

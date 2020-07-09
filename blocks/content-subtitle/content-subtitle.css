@@ -19,3 +19,10 @@
     padding-bottom: 34px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .content-subtitle {
+    font-size: 12px;
+    padding-bottom: 26px;
+  }
+}

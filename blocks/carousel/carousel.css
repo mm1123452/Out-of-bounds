@@ -6,8 +6,9 @@
 @import url(./__bg-image/carousel__bg-image.css);
 @import url(./__slide-button/carousel__slide-button.css);
 @import url(./__nav/carousel__nav.css);
+@import url(./__nav-label/carousel__nav-label.css);
 @import url(./__indicator/carousel__indicator.css);
-@import url(./__indicators/carousel__indicators.css);
+@import url(./__indicator-container/carousel__indicator-container.css);
 @import url(./__button-wrapper/carousel__button-wrapper.css);
 @import url(./__slide-text-wrapper/carousel__slide-text-wrapper.css);
 /* modifiers */
@@ -16,5 +17,4 @@
 @import url(./__slide-button/_type/carousel__slide-button_type_prev.css);
 @import url(./__slide/_type/carousel__slide_type_statistics.css);
 @import url(./__slide/_type/carousel__slide_type_about.css);
-@import url(./__track/_type/carousel__track_type_statistics.css);
-@import url(./__track/_type/carousel__track_type_about.css);
+@import url(./__nav/_type/carousel__nav_type_statistics.css);

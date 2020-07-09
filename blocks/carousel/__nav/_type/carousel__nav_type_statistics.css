@@ -1,0 +1,22 @@
+.carousel__nav_type_statistics {
+  border-bottom: 1.7px solid #223d46;
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__nav_type_statistics {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__nav_type_statistics {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__nav_type_statistics {
+    padding-bottom: 30px;
+  }
+}

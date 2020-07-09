@@ -11,14 +11,12 @@
 
 @media screen and (max-width: 1024px) {
   .carousel__slide {
-    height: 166px;
-    margin-right: 19px;
+    border-radius: 8px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .carousel__slide {
-    height: 188px;
-    margin-right: 22px;
+    border-radius: 7px;
   }
 }

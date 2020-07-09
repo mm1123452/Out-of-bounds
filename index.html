@@ -9,23 +9,8 @@
 
   <body class="page">
     <header class="header">
-      <img
-        src="./images/trees.png"
-        alt="two trees"
-        class="header__background-img header__background-img_name_trees"
-      />
-      <img
-        src="./images/window.png"
-        alt="a girl and a dog looking out a window"
-        class="header__background-img header__background-img_name_window"
-      />
-      <img
-        src="./images/yellow-tree.png"
-        alt="a yellow tree"
-        class="header__background-img header__background-img_name_yellow-tree"
-      />
-
       <div class="logo logo_place_header"></div>
+      <button class="header__menu"></button>
       <ul class="header__links">
         <li>
           <a
@@ -52,7 +37,7 @@
     <main class="content">
       <section class="about">
         <h2 class="content-title">We provide help</h2>
-        <p class="about__text">
+        <p class="about__text about__text_type_subtitle">
           <span class="about__italic-text">Out of Bounds</span> focuses on
           prevention by showing the children of incarcerated parents that Love
           and Life have No Bounds.
@@ -60,8 +45,27 @@
         <div class="carousel">
           <div class="carousel__track-container">
             <ul class="carousel__track carousel__track_type_about">
-              <!-- if you add new slides to the carousel, don't forget to update
-                   the width in the carousel__track_type_about.css file -->
+              <li class="carousel__slide carousel__slide_type_about">
+                <img
+                  class="carousel__bg-image"
+                  src="./images/image_children.jpg"
+                  alt="2 children"
+                />
+              </li>
+              <li class="carousel__slide carousel__slide_type_about">
+                <img
+                  class="carousel__bg-image"
+                  src="./images/image_children.jpg"
+                  alt="2 children"
+                />
+              </li>
+              <li class="carousel__slide carousel__slide_type_about">
+                <img
+                  class="carousel__bg-image"
+                  src="./images/image_children.jpg"
+                  alt="2 children"
+                />
+              </li>
               <li class="carousel__slide carousel__slide_type_about">
                 <img
                   class="carousel__bg-image"
@@ -85,7 +89,7 @@
               ></button>
               <p class="carousel__nav-label">prev</p>
             </div>
-            <div class="carousel__indicators">
+            <div class="carousel__indicator-container">
               <!-- this div will be filled with as many needed indicator buttons with the help of Carousel.js script -->
             </div>
             <div class="carousel__button-wrapper">
@@ -106,9 +110,9 @@
           coping skill workshops.
         </p>
         <p class="about__text">
-          Out of Bounds will assist in fostering and maintaining relationships
-          between parents and their children through programming and special
-          projects.
+          <span class="about__italic-text">Out of Bounds</span> will assist in
+          fostering and maintaining relationships between parents and their
+          children through programming and special projects.
         </p>
       </section>
 
@@ -118,8 +122,6 @@
         <div class="carousel">
           <div class="carousel__track-container">
             <ul class="carousel__track carousel__track_type_statistics">
-              <!-- if you add new slides to the carousel, don't forget to update
-                   the width in the carousel__track_type_statistics.css file -->
               <li class="carousel__slide carousel__slide_type_statistics">
                 <img
                   src="./images/dots-background.png"
@@ -177,14 +179,14 @@
               </li>
             </ul>
           </div>
-          <div class="carousel__nav">
+          <div class="carousel__nav carousel__nav_type_statistics">
             <div class="carousel__button-wrapper">
               <button
                 class="carousel__slide-button carousel__slide-button_type_prev hover-button"
               ></button>
               <p class="carousel__nav-label">prev</p>
             </div>
-            <div class="carousel__indicators">
+            <div class="carousel__indicator-container">
               <!-- this div will be filled with as many needed indicator buttons with the help of Carousel.js script -->
             </div>
             <div class="carousel__button-wrapper">
@@ -219,7 +221,9 @@
         <p class="hello-there__links">
           <a href="mailto:rwilkerson@outofboundssupport.com" class="link"
             >Email</a
-          >/<a
+          >
+          /
+          <a
             href="https://www.instagram.com/outofboundssupport/"
             target="_blank"
             class="link"
@@ -228,14 +232,14 @@
         </p>
       </section>
       <section class="additional-info">
-        <h2 class="additional-info__title">We know a lot</h2>
-        <p class="additional-info__subtitle">If you want to, read this.</p>
+        <h2 class="content-title">we know a lot</h2>
+        <p class="content-subtitle">If you want to, read this.</p>
 
         <ul class="additional-info__list">
           <li class="additional-info__list-item">
             <a
               class="link additional-info__link"
-              href="https://www.ncjrs.gov/pdffiles1/nij/250349.pdf?fbclid=IwAR2nscfCxNjtE6amLFRblq2Zum1RtGViz1pVVUt-MsrcI616YmxOWxz1ILw"
+              href="https://nrccfi.camden.rutgers.edu/files/nrccfi-fact-sheet-2014.pdf?fbclid=IwAR3CXF7swyM7VQjr7qcnMJ59I0BKTyapSVuHJ5GH9KYWxYv63t4fnZhgYsk"
               target="_blank"
             >
               Children and Families of The Incarcerated Fact Sheet,
@@ -243,7 +247,7 @@
             </a>
             <a
               class="link additional-info__link"
-              href="https://www.ncjrs.gov/pdffiles1/nij/250349.pdf?fbclid=IwAR2nscfCxNjtE6amLFRblq2Zum1RtGViz1pVVUt-MsrcI616YmxOWxz1ILw"
+              href="https://nrccfi.camden.rutgers.edu/files/nrccfi-fact-sheet-2014.pdf?fbclid=IwAR3CXF7swyM7VQjr7qcnMJ59I0BKTyapSVuHJ5GH9KYWxYv63t4fnZhgYsk"
               target="_blank"
             >
               <div class="arrow-icon"></div>
@@ -252,7 +256,7 @@
           <li class="additional-info__list-item">
             <a
               class="link additional-info__link"
-              href="https://nrccfi.camden.rutgers.edu/files/nrccfi-fact-sheet-2014.pdf?fbclid=IwAR3CXF7swyM7VQjr7qcnMJ59I0BKTyapSVuHJ5GH9KYWxYv63t4fnZhgYsk"
+              href="https://www.ncjrs.gov/pdffiles1/nij/250349.pdf?fbclid=IwAR2nscfCxNjtE6amLFRblq2Zum1RtGViz1pVVUt-MsrcI616YmxOWxz1ILw"
               target="_blank"
             >
               The Impact of Incarceration on Dependent Children,
@@ -260,7 +264,7 @@
             >
             <a
               class="link additional-info__link"
-              href="https://nrccfi.camden.rutgers.edu/files/nrccfi-fact-sheet-2014.pdf?fbclid=IwAR3CXF7swyM7VQjr7qcnMJ59I0BKTyapSVuHJ5GH9KYWxYv63t4fnZhgYsk"
+              href="https://www.ncjrs.gov/pdffiles1/nij/250349.pdf?fbclid=IwAR2nscfCxNjtE6amLFRblq2Zum1RtGViz1pVVUt-MsrcI616YmxOWxz1ILw"
               target="_blank"
             >
               <div class="arrow-icon"></div>
@@ -387,7 +391,8 @@
         <p class="footer__text">Made by Students of Yandex.Practicum</p>
       </section>
     </main>
-    <script type="module" src="./scripts/script.js"></script>
-    <script type="module" src="./scripts/Carousel.js"></script>
+    <script type="module" src="./pages/index.js"></script>
+    <script type="module" src="./components/Carousel.js"></script>
+    <script type="module" src="./utils/constants.js"></script>
   </body>
 </html>

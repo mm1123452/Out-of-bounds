@@ -3,6 +3,13 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 110px;
-  height: 100px;
+  width: 72px;
+  height: 66px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 110px;
+    height: 100px;
+  }
 }
