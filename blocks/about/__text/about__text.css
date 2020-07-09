@@ -9,6 +9,14 @@
   margin: 0;
 }
 
+@media only screen and (max-width: 425px) {
+  .about__text {
+    font-size: 13px;
+    line-height: 19px;
+    margin: 20px 0  16px;
+  }
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about__text {
     margin: 40px 0 18px;

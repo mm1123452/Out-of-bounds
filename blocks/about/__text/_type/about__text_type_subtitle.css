@@ -2,6 +2,12 @@
   margin: 8px 0 34px;
 }
 
+@media only screen and (max-width: 425px) {
+  .about__text_type_subtitle {
+    margin: 0 0 20px;
+  }
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about__text_type_subtitle {
     margin: 15px 0 40px;
