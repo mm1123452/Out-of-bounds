@@ -11,13 +11,19 @@
 
 .donations {
   padding: 100px 0 10px 0;
-  margin: 0 40px;
+  margin: 0 120px;
   border-bottom: 1.7px solid #223d46;
+}
+
+@media screen and (max-width: 1280px) {
+  .donations {
+    margin: 0 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .donations {
-    padding: 84px 0 0 0;
+    padding: 84px 0 10px 0;
   }
 }
 
@@ -25,5 +31,12 @@
   .donations {
     padding: 68px 0 0 0;
     margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .donations {
+    padding: 50px 0 0 0;
+    margin: 0 16px;
   }
 }

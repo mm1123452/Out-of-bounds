@@ -33,3 +33,12 @@
     font-size: 23px;
   }
 }
+
+@media (max-width: 425px) {
+  .donations__submit-button {
+    font-size: 19px;
+    line-height: 29px;
+    height: 39px;
+    margin-bottom: 20px;
+  }
+}

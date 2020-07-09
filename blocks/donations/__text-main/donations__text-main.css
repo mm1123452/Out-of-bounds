@@ -21,3 +21,11 @@
     margin: 20px 0 90px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .donations__text-main {
+    font-size: 13px;
+    line-height: 19px;
+    margin: 16px 0 60px;
+  }
+}

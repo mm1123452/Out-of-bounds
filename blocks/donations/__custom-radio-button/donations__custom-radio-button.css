@@ -34,3 +34,11 @@
     font-size: 23px;
   }
 }
+
+@media (max-width: 425px) {
+  .donations__custom-radio-button {
+    font-size: 19px;
+    line-height: 29px;
+    height: 39px;
+  }
+}
