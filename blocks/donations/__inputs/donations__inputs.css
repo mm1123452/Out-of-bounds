@@ -19,3 +19,11 @@
     row-gap: 40px;
   }
 }
+
+@media (max-width: 425px) {
+  .donations__inputs {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    padding-bottom: 40px;
+  }
+}

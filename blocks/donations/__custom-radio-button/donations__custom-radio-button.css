@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   height: 59px;
-  padding: 0 10px;
+  padding: 0 52px;
 }
 
 .donations__custom-radio-button:hover {
@@ -21,16 +21,32 @@
   border-color: #ffc124;
 }
 
+@media (max-width: 1280px) {
+  .donations__custom-radio-button {
+    padding: 0 42px;
+  }
+}
+
 @media (max-width: 1024px) {
   .donations__custom-radio-button {
     font-size: 25px;
     line-height: 31px;
     height: 47px;
+    padding: 0 32px;
   }
 }
 
 @media (max-width: 768px) {
   .donations__custom-radio-button {
     font-size: 23px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .donations__custom-radio-button {
+    font-size: 19px;
+    line-height: 29px;
+    height: 39px;
   }
 }
