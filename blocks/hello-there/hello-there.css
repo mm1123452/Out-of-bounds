@@ -23,8 +23,7 @@
 
 @media (min-width: 1024px) {
   .hello-there {
-    padding-top: 84px;
-    margin: 0 40px;
+    padding: 84px 40px;
     column-gap: 40px;
     grid-template-rows: auto 257px auto;
   }
@@ -32,8 +31,13 @@
 
 @media (min-width: 1280px) {
   .hello-there {
-    padding-top: 100px;
-    margin: 0 40px;
+    padding: 100px 40px 0;
     grid-template-rows: auto 307px auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hello-there {
+    padding: 100px 120px 0;
   }
 }
