@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .donations {
     padding: 50px 0 0 0;
     margin: 0 16px;

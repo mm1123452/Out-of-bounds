@@ -2,15 +2,22 @@
   font-size: 28px;
   line-height: 39px;
   font-weight: 500;
-  margin: 34px 0 160px;
+  margin: 12px 0 160px;
   padding: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .donations__text-main {
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .donations__text-main {
     font-size: 23px;
     line-height: 31px;
-    margin: 32px 0 110px;
+    margin: 15px 0 110px;
   }
 }
 
@@ -18,7 +25,7 @@
   .donations__text-main {
     font-size: 20px;
     line-height: 28px;
-    margin: 20px 0 90px;
+    margin: 8px 0 90px;
   }
 }
 
@@ -26,6 +33,6 @@
   .donations__text-main {
     font-size: 13px;
     line-height: 19px;
-    margin: 16px 0 60px;
+    margin: 0 0 60px;
   }
 }
