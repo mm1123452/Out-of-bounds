@@ -1,18 +1,22 @@
-import Carousel from '../components/Carousel.js';
+import Carousel from "../components/Carousel.js";
+import FormValidator from "../components/FormValidator.js";
 import {
   carouselList,
-  donateBtn
-} from '../utils/constants.js'
+  donateBtn,
+  formElement,
+  settingsForValidation,
+} from "../utils/constants.js";
 
 carouselList.forEach((carouselElement) => {
   const carousel = new Carousel(carouselElement);
   carousel.generateCarousel();
 });
 
-donateBtn.addEventListener('click', (e) => {
+const formValidator = new FormValidator(settingsForValidation, formElement);
+formValidator.enableValidation();
+
+donateBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  e.target.textContent = 'Thank You!';
+  e.target.textContent = "Thank You!";
   e.target.parentNode.reset();
 });
-
-

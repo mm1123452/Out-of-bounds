@@ -8,6 +8,8 @@
 @import url(./__custom-radio-button/donations__custom-radio-button.css);
 @import url(./__submit-button/donations__submit-button.css);
 @import url(./__last-radio-option/donations__last-radio-option.css);
+@import url(./__last-input/donations__last-input.css);
+@import url(./__input-error/donations__input-error.css);
 
 .donations {
   padding: 100px 0 10px 0;

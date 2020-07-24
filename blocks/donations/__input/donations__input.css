@@ -3,12 +3,16 @@
   line-height: 30px;
   border: none;
   border-bottom: 1.7px solid #499b99;
-  min-width: 100px;
+  width: 100%;
 }
 
 .donations__input:focus {
   outline: none;
   border-bottom: 1.7px solid #ffc124;
+}
+
+.donations__input_type_error {
+  border-bottom-color: #FF0000;
 }
 
 @media (max-width: 1024px) {
@@ -20,9 +24,6 @@
 @media (max-width: 768px) {
   .donations__input {
     font-size: 17px;
-  }
-  .donations__input:last-child {
-    grid-column: 1/-1;
   }
 }
 
