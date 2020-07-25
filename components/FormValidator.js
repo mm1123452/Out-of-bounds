@@ -1,13 +1,13 @@
 export default class FormValidator {
   constructor(
     {
-      inputSelector, //"donations__input"
-      submitButtonSelector, //"donations__submit-button"
-      inactiveButtonClass, // "donations__submit-button_type_inactive"
-      inputErrorClass, // "donations__input_type_error"
-      errorClass, //"donations__input-error_type_active"
+      inputSelector,
+      submitButtonSelector,
+      inactiveButtonClass,
+      inputErrorClass,
+      errorClass,
     },
-    formElement //"donations__form"
+    formElement
   ) {
     this._element = formElement;
     this._inputSelector = inputSelector;
@@ -51,7 +51,6 @@ export default class FormValidator {
     this._toggleButtonState(inputList, submitBtn);
 
     inputList.forEach((input) => {
-      this._isValid(input);
       input.addEventListener("input", () => {
         this._isValid(input);
         this._toggleButtonState(inputList, submitBtn);
