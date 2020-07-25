@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  .donations__last-radio-option {
+  .donations__last-input {
     grid-column: 1/-1;
   }
 }
