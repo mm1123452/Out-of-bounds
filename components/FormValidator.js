@@ -17,7 +17,6 @@ export default class FormValidator {
     this._errorClass = errorClass;
   }
 
-  //Show error
   _showInputError(input, errorMessage) {
     const errorElement = this._element.querySelector(`#${input.id}-error`);
     input.classList.add(this._inputErrorClass);
@@ -25,7 +24,6 @@ export default class FormValidator {
     errorElement.classList.add(this._errorClass);
   }
 
-  //Hide error
   _hideInputError(input) {
     const errorElement = this._element.querySelector(`#${input.id}-error`);
     input.classList.remove(this._inputErrorClass);
@@ -33,7 +31,6 @@ export default class FormValidator {
     errorElement.textContent = '';
   }
 
-  //Check form field
   _isValid(input) {
     if (!input.validity.valid) {
       this._showInputError(input, input.validationMessage);
@@ -42,7 +39,6 @@ export default class FormValidator {
     }
   }
 
-  //Check all fields in form
   _setEventListeners() {
     const inputList = Array.from(
       this._element.querySelectorAll(this._inputSelector)
@@ -58,14 +54,12 @@ export default class FormValidator {
     });
   }
 
-  //Check if any field from list is invalid
   _hasInvalidInput(inputList) {
     return inputList.some((input) => {
       return !input.validity.valid;
     });
   }
 
-  //Toggle submit button depending on validity of fields
   _toggleButtonState(inputList, button) {
     if (this._hasInvalidInput(inputList)) {
       button.classList.add(this._inactiveButtonClass);
@@ -76,7 +70,6 @@ export default class FormValidator {
     }
   }
 
-  //Check form
   enableValidation() {
     this._setEventListeners();
   }
