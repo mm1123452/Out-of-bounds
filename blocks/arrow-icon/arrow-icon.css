@@ -1,12 +1,12 @@
 .arrow-icon {
   width: 43px;
   height: 19px;
-  background: url("./blue-arrow.png") center right no-repeat;
+  background: url('./blue-arrow.png') center right no-repeat;
   background-size: 11px 11px;
 }
 
 .arrow-icon:hover {
-  background: url("./yellow-arrow.png") center right no-repeat;
+  background: url('./yellow-arrow.png') center right no-repeat;
   background-size: 11px 11px;
 }
 

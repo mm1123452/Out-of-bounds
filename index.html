@@ -282,32 +282,44 @@
           can pledge any amount to us, we will be happy for any help, even the
           smallest.
         </p>
-        <form class="donations__form">
+        <form class="donations__form" novalidate>
           <div class="donations__inputs">
-            <input
-              type="text"
-              class="donations__input"
-              placeholder="Your Name"
-              minlength="2"
-              maxlength="40"
-              pattern="[A-Za-z -]+"
-              required
-            />
-            <input
-              type="text"
-              class="donations__input"
-              placeholder="Your Surname"
-              minlength="2"
-              maxlength="40"
-              pattern="[A-Za-z -]+"
-              required
-            />
-            <input
-              type="email"
-              class="donations__input"
-              placeholder="E-mail"
-              required
-            />
+            <label>
+              <input
+                type="text"
+                class="donations__input"
+                id="input_name"
+                placeholder="Your Name"
+                minlength="2"
+                maxlength="40"
+                pattern="[A-Za-z -]+"
+                required />
+              <span id="input_name-error" class="donations__input-error"></span
+            ></label>
+            <label>
+              <input
+                type="text"
+                class="donations__input"
+                id="input_last-name"
+                placeholder="Your Surname"
+                minlength="2"
+                maxlength="100"
+                pattern="[A-Za-z -]+"
+                required />
+              <span
+                id="input_last-name-error"
+                class="donations__input-error"
+              ></span
+            ></label>
+            <label class="donations__last-input">
+              <input
+                type="email"
+                class="donations__input"
+                id="input_email"
+                placeholder="E-mail"
+                required />
+              <span id="input_email-error" class="donations__input-error"></span
+            ></label>
           </div>
           <div class="donations__buttons">
             <label>
@@ -367,7 +379,10 @@
               >
             </label>
           </div>
-          <button class="donations__submit-button hover-button" type="submit">
+          <button
+            class="donations__submit-button hover-button "
+            type="submit"
+          >
             Make a pledge
           </button>
         </form>

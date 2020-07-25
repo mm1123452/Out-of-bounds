@@ -1,6 +1,5 @@
 @import url(./__text/about__text.css);
 @import url(./__italic-text/about__italic-text.css);
-/* Modifiers */
 @import url(./__text/_type/about__text_type_subtitle.css);
 
 .about {

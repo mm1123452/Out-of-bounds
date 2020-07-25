@@ -9,14 +9,13 @@
   justify-content: center;
   align-items: center;
   height: 59px;
-  padding: 0 10px;
   background-color: #ffc124;
   border: none;
   margin-bottom: 30px;
 }
 
 .donations__submit-button_type_inactive {
-  background-color: #999;
+  background-color: #999999;
 }
 
 @media (max-width: 1024px) {
