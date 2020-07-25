@@ -1,3 +1,4 @@
+import './index.css';
 import Carousel from '../components/Carousel.js';
 import FormValidator from '../components/FormValidator.js';
 import {
