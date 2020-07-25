@@ -30,7 +30,7 @@ export default class FormValidator {
     const errorElement = this._element.querySelector(`#${input.id}-error`);
     input.classList.remove(this._inputErrorClass);
     errorElement.classList.remove(this._errorClass);
-    errorElement.textContent = "";
+    errorElement.textContent = '';
   }
 
   //Check form field
@@ -51,7 +51,7 @@ export default class FormValidator {
     this._toggleButtonState(inputList, submitBtn);
 
     inputList.forEach((input) => {
-      input.addEventListener("input", () => {
+      input.addEventListener('input', () => {
         this._isValid(input);
         this._toggleButtonState(inputList, submitBtn);
       });
