@@ -6,7 +6,7 @@ const settingsForValidation = {
   submitButtonSelector: '.donations__submit-button',
   inactiveButtonClass: 'donations__submit-button_type_inactive',
   inputErrorClass: 'donations__input_type_error',
-  errorClass: 'donations__input-error_type_active',
+  errorClass: 'donations__input-error_active',
 };
 
 export { carouselList, donateBtn, formElement, settingsForValidation };

@@ -3,27 +3,27 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 27px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 }
 
 @media screen and (max-width: 1024px) {
   .donations__inputs {
     grid-gap: 19px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .donations__inputs {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 40px;
+    row-gap: 10px;
   }
 }
 
 @media (max-width: 425px) {
   .donations__inputs {
     grid-template-columns: 1fr;
-    row-gap: 30px;
-    padding-bottom: 40px;
+    row-gap: 0;
+    padding-bottom: 10px;
   }
 }
