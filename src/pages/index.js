@@ -14,52 +14,49 @@ import {
   surnameInput,
   emailInput,
   donationAmount,
+  donationsEditableCustomRadioInput,
+  donationsNonEditableRadioInputs,
+  donationsEditableRadioInput,
+  donationsRadioTextInput,
+  donationsRadioTextInputError,
   selectCheckRadioValue,
 } from '../utils/constants.js';
 
-// constants that should eventually be moved to constants.js
-const editableRadioInput = document.querySelector(
-  '.donations__radio-button_editable',
-);
-const editableCustomRadioInput = document.querySelector(
-  '.donations__custom-radio-button_editable',
-);
-const radioTextInput = document.querySelector('.donations__input_for_radio');
-const radioTextInputError = document.querySelector('#input_other-amount-error');
-const nonEditableRadioInputs = Array.from(
-  document.querySelectorAll('.donations__radio-button'),
-).filter(
-  (button) => !button.className.includes('donations__radio-button_editable'),
-);
+function selectEditableRadioInput() {
+  donationsEditableRadioInput.checked = true;
+  donationsRadioTextInput.required = true;
+}
 
-// checked radio input if text input is clicked
-radioTextInput.addEventListener('click', () => {
-  editableRadioInput.checked = true;
-  // makes text input required now that editable button is checked
-  radioTextInput.required = true;
-});
-
-// focuses on text input if radio input is clicked
-editableCustomRadioInput.addEventListener('click', () => {
-  radioTextInput.blur();
+function focusOnRadioTextInput() {
   setTimeout(() => {
-    radioTextInput.focus();
+    donationsRadioTextInput.focus();
   }, 0);
-  // makes text input required now that editable button is checked
-  radioTextInput.required = true;
-});
+  donationsRadioTextInput.blur();
+  donationsRadioTextInput.required = true;
+}
 
-// sets radio value to radio text value
-radioTextInput.addEventListener('input', (e) => {
-  editableRadioInput.value = e.target.value.replace('#', '');
-});
+function setEditableRadioValueToRadioTextValue(e) {
+  donationsEditableRadioInput.value = e.target.value.replace('$', '');
+}
 
-// removes radio button text input required error and attribute when other radio buttons are checked
-nonEditableRadioInputs.forEach((input) => {
-  input.addEventListener('change', () => {
-    radioTextInput.required = false;
-    radioTextInputError.classList.remove('donations__input-error_active');
-  });
+function removeEditableRadioError() {
+  donationsRadioTextInput.required = false;
+  donationsRadioTextInputError.classList.remove(
+    'donations__input-error_active',
+  );
+}
+
+donationsRadioTextInput.addEventListener('click', selectEditableRadioInput);
+donationsEditableCustomRadioInput.addEventListener(
+  'click',
+  focusOnRadioTextInput,
+);
+donationsRadioTextInput.addEventListener(
+  'input',
+  setEditableRadioValueToRadioTextValue,
+);
+donationsNonEditableRadioInputs.forEach((input) => {
+  input.addEventListener('change', removeEditableRadioError);
 });
 
 carouselList.forEach((carouselElement) => {

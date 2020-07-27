@@ -1,19 +1,18 @@
 class Api {
   constructor(options) {
-    this.baseUrl = options.baseUrl,
-    this.headers = options.headers
+    (this.baseUrl = options.baseUrl), (this.headers = options.headers);
   }
 
-  postPledge({Name, Surname, Email, Pledge}) {
+  postPledge({ Name, Surname, Email, Pledge }) {
     return fetch(`${this.baseUrl}/pledges`, {
-      method: "POST",
+      method: 'POST',
       headers: this.headers,
 
       body: JSON.stringify({
         Name,
         Surname,
         Email,
-        Pledge
+        Pledge,
       }),
     })
       .then((res) => {

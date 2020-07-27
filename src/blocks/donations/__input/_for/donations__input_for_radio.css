@@ -3,10 +3,8 @@
   border: none;
   text-align: center;
   outline: none;
-}
-
-.donations__input_for_radio:hover {
-  cursor: pointer;
+  font-size: 19px;
+  line-height: 29px;
 }
 
 .donations__input_for_radio::placeholder {
@@ -14,6 +12,10 @@
   line-height: 29px;
   color: #000;
   font-weight: normal;
+}
+
+.donations__input_for_radio:hover {
+  cursor: pointer;
 }
 
 .donations__radio-button:checked
