@@ -6,32 +6,28 @@ const surnameInput = formElement.elements.surname;
 const emailInput = formElement.elements.email;
 const donationAmount = formElement.elements['donation-amount'];
 const donationsEditableRadioInput = document.querySelector(
-  '.donations__radio-button_editable',
+  '.donations__radio-button_editable'
 );
 const donationsEditableCustomRadioInput = document.querySelector(
-  '.donations__custom-radio-button_editable',
+  '.donations__custom-radio-button_editable'
 );
 const donationsRadioTextInput = document.querySelector(
-  '.donations__input_for_radio',
+  '.donations__input_for_radio'
 );
 const donationsRadioTextInputError = document.querySelector(
-  '#input_other-amount-error',
+  '#input_other-amount-error'
 );
 const donationsNonEditableRadioInputs = Array.from(
-  document.querySelectorAll('.donations__radio-button'),
+  document.querySelectorAll('.donations__radio-button')
 ).filter(
-  (button) => !button.className.includes('donations__radio-button_editable'),
+  (button) => !button.className.includes('donations__radio-button_editable')
 );
-const selectCheckRadioValue = (radioArray) => {
-  const selected = radioArray.find((item) => item.checked);
-  return selected.value;
-};
 const settingsForValidation = {
   inputSelector: '.donations__input',
   submitButtonSelector: '.donations__submit-button',
   inactiveButtonClass: 'donations__submit-button_type_inactive',
   inputErrorClass: 'donations__input_type_error',
-  errorClass: 'donations__input-error_active',
+  errorClass: 'donations__input-error_active'
 };
 
 const baseUrl = 'https://api.outofbound.tk';
@@ -53,6 +49,5 @@ export {
   donationsNonEditableRadioInputs,
   donationsEditableRadioInput,
   donationsRadioTextInput,
-  donationsRadioTextInputError,
-  selectCheckRadioValue,
+  donationsRadioTextInputError
 };
