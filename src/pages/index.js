@@ -73,10 +73,10 @@ donateBtn.addEventListener('click', (e) => {
   e.target.textContent = 'Thank You!';
 
   const data = {
-    name: nameInput.value,
-    surname: surnameInput.value,
-    email: emailInput.value,
-    pledge: selectCheckRadioValue(Array.from(donationAmount))
+    Name: nameInput.value,
+    Surname: surnameInput.value,
+    Email: emailInput.value,
+    Pledge: selectCheckRadioValue(Array.from(donationAmount))
   };
 
   api.postPledge(data);

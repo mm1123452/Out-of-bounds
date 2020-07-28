@@ -4,17 +4,11 @@ class Api {
     this._headers = options.headers;
   }
 
-  postPledge({ name, surname, email, pledge }) {
+  postPledge(data) {
     fetch(`${this._baseUrl}/pledges`, {
       method: 'POST',
       headers: this._headers,
-
-      body: JSON.stringify({
-        Name: name,
-        Surname: surname,
-        Email: email,
-        Pledge: pledge
-      })
+      body: JSON.stringify(data)
     })
       .then((res) => {
         if (res.ok) {
