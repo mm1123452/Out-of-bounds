@@ -1,5 +1,5 @@
 .carousel__slide-button_type_next {
-  background-image: url(../../../../images/button-slide-next.png);
+  background-image: url(../../../../images/right-arrow.svg);
   align-self: end;
   margin-left: 30px;
 }
