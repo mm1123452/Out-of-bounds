@@ -1,40 +1,35 @@
 .arrow-icon {
-  width: 43px;
-  height: 19px;
-  background: url('./blue-arrow.png') center right no-repeat;
-  background-size: 11px 11px;
+  background-image: url('./blue-arrow.svg');
+  width: 26px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center right;
 }
 
 .arrow-icon:hover {
-  background: url('./yellow-arrow.png') center right no-repeat;
-  background-size: 11px 11px;
+  background-image: url('./yellow-arrow.svg');
 }
 
-@media only screen and  (max-width: 320px) {
+@media only screen and (min-width: 768px) {
   .arrow-icon {
-    width: 26px;
-    height: 22px;
-    background-size: 8px 8px;
-  }
-
-  .arrow-icon:hover {
-    width: 26px;
-    height: 22px;
-    background-size: 8px 8px;
+    width: 43px;
+    height: 19px;
+    background-size: 12px;
   }
 }
 
-@media only screen and  (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   .arrow-icon {
     width: 61px;
-    height: 39px;
-    background-size: 16px 16px;
+    height: 34px;
+    background-size: 14px;
   }
+}
 
-  .arrow-icon:hover {
-    width: 61px;
+@media only screen and (min-width: 1280px) {
+  .arrow-icon {
     height: 39px;
     background-size: 16px 16px;
   }
 }
-
