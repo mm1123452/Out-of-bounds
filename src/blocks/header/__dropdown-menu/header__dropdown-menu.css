@@ -1,0 +1,15 @@
+.header__dropdown-menu {
+  position: absolute;
+  height: 560px;
+  width: 100%;
+  right: 0;
+  top: -560px;
+  background-color: #223d46;
+  transition: top ease-in-out 0.3s;
+}
+
+@media (min-width: 768px) {
+  .header__dropdown-menu {
+    display: none;
+  }
+}

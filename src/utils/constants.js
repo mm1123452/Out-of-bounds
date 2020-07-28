@@ -1,3 +1,6 @@
+const dropdownMenu = document.querySelector('.header__dropdown-menu');
+const headerMenuBtn = document.querySelector('.header__button_type_menu');
+const headerExitBtn = dropdownMenu.querySelector('.header__button_type_exit');
 const carouselList = document.querySelectorAll('.carousel');
 const donateBtn = document.querySelector('.donations__submit-button');
 const formElement = document.querySelector('.donations__form');
@@ -35,6 +38,9 @@ const baseUrl = 'https://api.outofbound.tk';
 const headers = { 'Content-Type': 'application/json' };
 
 export {
+  dropdownMenu,
+  headerMenuBtn,
+  headerExitBtn,
   carouselList,
   donateBtn,
   formElement,
