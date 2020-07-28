@@ -3,7 +3,7 @@ import Carousel from '../components/Carousel';
 import FormValidator from '../components/FormValidator';
 import Api from '../components/Api';
 import {
-  dropdownMenu,
+  sideMenu,
   headerMenuBtn,
   headerExitBtn,
   carouselList,
@@ -24,12 +24,12 @@ import {
 } from '../utils/constants';
 import { selectCheckRadioValue } from '../utils/utils';
 
-function toggleDropdownMenu() {
-  dropdownMenu.classList.toggle('header__dropdown-menu_show');
+function toggleSideMenu() {
+  sideMenu.classList.toggle('header__side-menu_show');
 }
 
-headerMenuBtn.addEventListener('click', toggleDropdownMenu);
-headerExitBtn.addEventListener('click', toggleDropdownMenu);
+headerMenuBtn.addEventListener('click', toggleSideMenu);
+headerExitBtn.addEventListener('click', toggleSideMenu);
 
 function selectEditableRadioInput() {
   donationsEditableRadioInput.checked = true;
