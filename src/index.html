@@ -372,13 +372,25 @@
             <label class="donations__last-radio-option">
               <input
                 type="radio"
-                class="donations__radio-button"
-                value="other"
+                class="donations__radio-button donations__radio-button_editable"
                 name="donation-amount"
               />
-              <span class="donations__custom-radio-button hover-button"
-                >Another (from $1)</span
+              <span
+                class="donations__custom-radio-button donations__custom-radio-button_editable hover-button"
               >
+                <input
+                  type="text"
+                  minlength="2"
+                  pattern="\$\d+"
+                  class="donations__input donations__input_for_radio"
+                  id="input_other-amount"
+                  placeholder="Another (from $1)"
+                />
+              </span>
+              <span
+                id="input_other-amount-error"
+                class="donations__input-error"
+              ></span>
             </label>
           </div>
           <button class="donations__submit-button hover-button" type="submit">

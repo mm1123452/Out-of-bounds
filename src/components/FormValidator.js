@@ -5,7 +5,7 @@ export default class FormValidator {
       submitButtonSelector,
       inactiveButtonClass,
       inputErrorClass,
-      errorClass,
+      errorClass
     },
     formElement
   ) {
@@ -48,6 +48,10 @@ export default class FormValidator {
 
     inputList.forEach((input) => {
       input.addEventListener('input', () => {
+        this._isValid(input);
+        this._toggleButtonState(inputList, submitBtn);
+      });
+      input.addEventListener('blur', () => {
         this._isValid(input);
         this._toggleButtonState(inputList, submitBtn);
       });

@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr) auto;
   grid-gap: 18px;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 1024px) {
   .donations__buttons {
     grid-gap: 14px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 }
 
@@ -16,7 +16,7 @@
   .donations__buttons {
     grid-template-columns: repeat(4, 1fr);
     row-gap: 16px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 }
 
@@ -25,7 +25,6 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 10px;
     column-gap: 6px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
-

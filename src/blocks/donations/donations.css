@@ -3,6 +3,7 @@
 @import url(./__link/donations__link.css);
 @import url(./__inputs/donations__inputs.css);
 @import url(./__input/donations__input.css);
+@import url(./__input/_for/donations__input_for_radio.css);
 @import url(./__buttons/donations__buttons.css);
 @import url(./__radio-button/donations__radio-button.css);
 @import url(./__custom-radio-button/donations__custom-radio-button.css);
