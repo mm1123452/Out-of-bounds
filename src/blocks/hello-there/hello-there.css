@@ -23,7 +23,7 @@
 
 @media (min-width: 1024px) {
   .hello-there {
-    padding: 84px 40px;
+    padding: 84px 40px 0;
     column-gap: 40px;
     grid-template-rows: auto 257px auto;
   }

@@ -1,9 +1,5 @@
 .additional-info__list-item {
   margin-bottom: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
 }
 
 .additional-info__list-item:last-of-type {
@@ -17,8 +13,7 @@
 }
 
 @media only screen and (max-width: 424px) {
-  .additional-info__list-item  {
+  .additional-info__list-item {
     margin-bottom: 18px;
-    align-items: flex-end;
   }
 }
