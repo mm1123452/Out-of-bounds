@@ -1,0 +1,6 @@
+.header__links_place_side-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 163px;
+  align-items: center;
+}

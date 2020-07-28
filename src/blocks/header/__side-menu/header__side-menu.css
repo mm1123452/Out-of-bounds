@@ -1,0 +1,15 @@
+.header__side-menu {
+  position: absolute;
+  height: 525px;
+  width: 100%;
+  right: -100%;
+  top: 0;
+  background-color: #223d46;
+  transition: right ease-in-out 0.5s;
+}
+
+@media (min-width: 768px) {
+  .header__side-menu {
+    display: none;
+  }
+}

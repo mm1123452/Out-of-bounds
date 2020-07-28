@@ -1,9 +1,11 @@
 import './index.css';
-import Carousel from '../components/Carousel.js';
-import FormValidator from '../components/FormValidator.js';
+import Carousel from '../components/Carousel';
+import FormValidator from '../components/FormValidator';
 import Api from '../components/Api';
-
 import {
+  sideMenu,
+  headerMenuBtn,
+  headerExitBtn,
   carouselList,
   donateBtn,
   formElement,
@@ -21,6 +23,13 @@ import {
   donationsRadioTextInputError
 } from '../utils/constants';
 import { selectCheckRadioValue } from '../utils/utils';
+
+function toggleSideMenu() {
+  sideMenu.classList.toggle('header__side-menu_show');
+}
+
+headerMenuBtn.addEventListener('click', toggleSideMenu);
+headerExitBtn.addEventListener('click', toggleSideMenu);
 
 function selectEditableRadioInput() {
   donationsEditableRadioInput.checked = true;

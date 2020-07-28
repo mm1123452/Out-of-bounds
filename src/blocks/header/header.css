@@ -1,13 +1,20 @@
-@import url(./__menu/header__menu.css);
+@import url(./__button/header__button.css);
+@import url(./__button/_type/header__button_type_exit.css);
+@import url(./__button/_type/header__button_type_menu.css);
 @import url(./__links/header__links.css);
+@import url(./__links/_place/header__links_place_side-menu.css);
 @import url(./__link/header__link.css);
 @import url(./__link/_border/header__link_border.css);
+@import url(./__side-menu/header__side-menu.css);
+@import url(./__side-menu/_show/header__side-menu_show.css);
 
 .header {
   background-color: #223d46;
   padding: 0 30px;
   height: 525px;
   display: flex;
+  position: relative;
+  overflow: hidden;
   border-bottom: 35px solid #429a6b;
   background-repeat: no-repeat;
   background-size: contain;
