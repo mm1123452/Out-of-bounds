@@ -13,7 +13,7 @@
     grid-template-rows: auto 235px auto;
     column-gap: 30px;
     display: grid;
-    padding: 68px 40px 0;
+    padding: 68px 30px 0;
   }
 
   .hello-there .content-title {
