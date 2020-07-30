@@ -8,6 +8,7 @@
 @import url(./__radio-button/donations__radio-button.css);
 @import url(./__custom-radio-button/donations__custom-radio-button.css);
 @import url(./__submit-button/donations__submit-button.css);
+@import url(./__submit-button/_type/donations__submit-button_type_inactive.css);
 @import url(./__last-radio-option/donations__last-radio-option.css);
 @import url(./__last-input/donations__last-input.css);
 @import url(./__input-error/donations__input-error.css);

@@ -1,5 +1,5 @@
 .carousel__slide-button {
-  border: 1.7px solid #499B99;
+  border: 1.7px solid #499b99;
   border-radius: 50%;
   background-color: unset;
   padding: 0;
@@ -11,7 +11,7 @@
 }
 
 .carousel__slide-button:hover {
-  border-color: #FFC124;
+  border-color: #ffc124;
 }
 
 @media screen and (max-width: 1024px) {

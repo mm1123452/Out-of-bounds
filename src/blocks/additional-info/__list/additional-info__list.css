@@ -7,7 +7,7 @@
 @media only screen and (max-width: 320px) {
   .additional-info__list {
     margin: 0;
-    padding-top:10px;
+    padding-top: 10px;
   }
 }
 
@@ -17,4 +17,3 @@
     padding-top: 4px;
   }
 }
-
