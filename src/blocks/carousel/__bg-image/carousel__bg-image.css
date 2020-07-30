@@ -8,13 +8,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-.carousel__bg-image {
-  border-radius: 8px;
-}
+  .carousel__bg-image {
+    border-radius: 8px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-.carousel__bg-image {
-  border-radius: 7px;
-}
+  .carousel__bg-image {
+    border-radius: 7px;
+  }
 }

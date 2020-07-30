@@ -12,7 +12,7 @@
 }
 
 .donations__input_type_error {
-  border-bottom-color: #FF0000;
+  border-bottom-color: #ff0000;
 }
 
 @media (max-width: 1024px) {
