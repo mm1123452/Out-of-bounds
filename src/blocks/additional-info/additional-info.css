@@ -1,0 +1,32 @@
+@import url(./__list/additional-info__list.css);
+@import url(./__list-item/additional-info__list-item.css);
+@import url(./__link/additional-info__link.css);
+@import url(./__link-text/additional-info__link-text.css);
+
+.additional-info {
+  border-bottom: 1.7px solid #223d46;
+  margin: 0 16px 0;
+  padding: 50px 0 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .additional-info {
+    padding: 68px 0 40px;
+    margin: 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .additional-info {
+    padding: 84px 0 50px;
+    margin: 0 40px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .additional-info {
+    padding: 100px 0 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

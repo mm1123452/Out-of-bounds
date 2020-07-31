@@ -1,0 +1,39 @@
+.additional-info__link {
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.additional-info__link:hover {
+  color: #000;
+  text-decoration: underline #ffc124;
+}
+
+.additional-info__link:hover .arrow-icon {
+  background: url('../../arrow-icon/yellow-arrow.svg') center right no-repeat;
+}
+
+@media only screen and (max-width: 320px) {
+  .additional-info__link {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .additional-info__link {
+    font-size: 24px;
+    line-height: 34px;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .additional-info__link {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}

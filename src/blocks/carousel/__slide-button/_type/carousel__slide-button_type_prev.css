@@ -1,0 +1,22 @@
+.carousel__slide-button_type_prev {
+  background-image: url(../../../../images/left-arrow.svg);
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide-button_type_prev {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide-button_type_prev {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__slide-button_type_prev {
+    margin-right: 10px;
+  }
+}

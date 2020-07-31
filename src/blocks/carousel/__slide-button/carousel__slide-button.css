@@ -1,0 +1,39 @@
+.carousel__slide-button {
+  border: 1.7px solid #499b99;
+  border-radius: 50%;
+  background-color: unset;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  height: 53px;
+  width: 53px;
+}
+
+.carousel__slide-button:hover {
+  border-color: #ffc124;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide-button {
+    background-size: 11px;
+    height: 49px;
+    width: 49px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide-button {
+    background-size: 10px;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__slide-button {
+    background-size: 8px;
+    height: 36px;
+    width: 36px;
+  }
+}

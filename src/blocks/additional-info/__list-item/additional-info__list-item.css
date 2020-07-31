@@ -1,0 +1,19 @@
+.additional-info__list-item {
+  margin-bottom: 16px;
+}
+
+.additional-info__list-item:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  .additional-info__list-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .additional-info__list-item {
+    margin-bottom: 18px;
+  }
+}

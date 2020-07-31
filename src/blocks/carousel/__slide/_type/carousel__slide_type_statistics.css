@@ -1,0 +1,28 @@
+.carousel__slide_type_statistics {
+  width: 382px;
+  height: 210px;
+  margin-right: 27px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide_type_statistics {
+    height: 166px;
+    margin-right: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide_type_statistics {
+    height: 188px;
+    margin-right: 22px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__slide_type_statistics {
+    margin: 0;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    width: 400px;
+  }
+}
