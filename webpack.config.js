@@ -6,10 +6,7 @@ module.exports = {
   entry: { main: './src/pages/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Out-of-bounds/',
-  },
-  devServer: {
-    openPage: 'Out-of-bounds/',
+    publicPath: '/',
   },
   module: {
     rules: [
