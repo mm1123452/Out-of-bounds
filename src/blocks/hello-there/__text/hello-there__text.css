@@ -1,24 +1,3 @@
 .hello-there__text {
   grid-row: span 2;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  margin: 18px 0 0;
-}
-
-@media (min-width: 1024px) {
-  .hello-there__text {
-    font-size: 23px;
-    line-height: 31px;
-    margin: 15px 0 0;
-  }
-}
-
-@media (min-width: 1280px) {
-  .hello-there__text {
-    font-size: 28px;
-    line-height: 39px;
-    margin: 7px 0 0;
-  }
 }
