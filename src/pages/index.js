@@ -90,5 +90,7 @@ donateBtn.addEventListener('click', (e) => {
 
   api.postPledge(data);
 
-  e.target.parentNode.reset();
+  setTimeout(() => {
+    e.target.textContent = 'Make a pledge';
+  }, 3000)
 });
