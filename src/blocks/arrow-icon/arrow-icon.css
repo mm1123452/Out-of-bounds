@@ -1,5 +1,5 @@
 .arrow-icon {
-  background-image: url('./blue-arrow.svg');
+  background-image: url('./arrow.svg');
   width: 26px;
   height: 22px;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 }
 
 .arrow-icon:hover {
-  background-image: url('./yellow-arrow.svg');
+  background-image: url('./hovered-arrow.svg');
 }
 
 @media only screen and (min-width: 768px) {
