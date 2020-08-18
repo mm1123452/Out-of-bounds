@@ -2,6 +2,7 @@
   width: 382px;
   height: 210px;
   margin-right: 27px;
+  background-color: #ffc124;
 }
 
 @media screen and (max-width: 1024px) {
