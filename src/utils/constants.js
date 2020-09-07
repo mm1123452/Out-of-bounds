@@ -33,7 +33,7 @@ const settingsForValidation = {
   errorClass: 'donations__input-error_active'
 };
 
-const baseUrl = 'https://api.outofbound.tk';
+const baseUrl = 'https://api.outofboundssupport.org';
 
 const headers = { 'Content-Type': 'application/json' };
 
