@@ -1,0 +1,13 @@
+.header__button_type_menu {
+  background-image: url(../../../../images/menu.svg);
+  height: 16px;
+  width: 24px;
+  background-size: contain;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .header__button_type_menu {
+    display: none;
+  }
+}

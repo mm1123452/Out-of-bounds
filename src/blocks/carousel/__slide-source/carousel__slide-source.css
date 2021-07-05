@@ -1,0 +1,22 @@
+.carousel__slide-source {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0 20px 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide-source {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 18px 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide-source {
+    margin: 0 20px 20px;
+  }
+}

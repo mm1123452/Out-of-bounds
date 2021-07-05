@@ -1,0 +1,35 @@
+.arrow-icon {
+  background-image: url('./arrow.svg');
+  width: 26px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center right;
+}
+
+.arrow-icon:hover {
+  background-image: url('./hovered-arrow.svg');
+}
+
+@media only screen and (min-width: 768px) {
+  .arrow-icon {
+    width: 43px;
+    height: 19px;
+    background-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .arrow-icon {
+    width: 61px;
+    height: 34px;
+    background-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .arrow-icon {
+    height: 39px;
+    background-size: 16px 16px;
+  }
+}

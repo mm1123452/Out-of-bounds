@@ -1,0 +1,24 @@
+.carousel__slide {
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide:last-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__slide {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide {
+    border-radius: 7px;
+  }
+}

@@ -1,0 +1,56 @@
+.donations__input_for_radio {
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.donations__input_for_radio::placeholder {
+  font-size: 19px;
+  line-height: 29px;
+  color: #000;
+  font-weight: normal;
+}
+
+.donations__input_for_radio:hover {
+  cursor: pointer;
+}
+
+.donations__radio-button:checked
+  + .donations__custom-radio-button
+  .donations__input_for_radio {
+  background-color: #ffc124;
+}
+
+.donations__input_for_radio:focus {
+  border: none;
+}
+
+.donations__input_for_radio:focus::placeholder {
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .donations__input_for_radio,
+  .donations__input_for_radio::placeholder {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .donations__input_for_radio,
+  .donations__input_for_radio::placeholder {
+    font-size: 25px;
+    line-height: 31px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .donations__input_for_radio,
+  .donations__input_for_radio::placeholder {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}

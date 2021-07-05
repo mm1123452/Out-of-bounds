@@ -1,0 +1,7 @@
+.header__button_type_exit {
+  background-image: url(../../../../images/exit.svg);
+  width: 21px;
+  height: 21px;
+  display: block;
+  margin: 25px 25px 0 auto;
+}

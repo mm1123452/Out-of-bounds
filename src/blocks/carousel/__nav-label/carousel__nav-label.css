@@ -1,0 +1,18 @@
+.carousel__nav-label {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__nav-label {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .carousel__nav-label {
+    font-size: 12px;
+  }
+}

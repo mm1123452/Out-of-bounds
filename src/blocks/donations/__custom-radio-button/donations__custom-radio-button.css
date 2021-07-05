@@ -1,0 +1,65 @@
+.donations__custom-radio-button {
+  border-radius: 200px;
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: normal;
+  border: 1.7px solid #499b99;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 59px;
+  padding: 0 52px;
+  --active-color: #ffc124;
+}
+
+.donations__custom-radio-button_color_green {
+  --active-color: #439a6c;
+}
+
+.donations__custom-radio-button_color_blue {
+  --active-color: #155aa2;
+}
+
+.donations__custom-radio-button_color_red {
+  --active-color: #dd5f46;
+}
+
+.donations__custom-radio-button:hover {
+  border-color: var(--active-color);
+}
+
+.donations__radio-button:checked + .donations__custom-radio-button {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+@media (max-width: 1280px) {
+  .donations__custom-radio-button {
+    padding: 0 42px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .donations__custom-radio-button {
+    font-size: 25px;
+    line-height: 31px;
+    height: 47px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .donations__custom-radio-button {
+    font-size: 23px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .donations__custom-radio-button {
+    font-size: 19px;
+    line-height: 29px;
+    height: 39px;
+  }
+}

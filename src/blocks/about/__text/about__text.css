@@ -1,0 +1,25 @@
+.about__text {
+  margin: 34px 0 18px;
+}
+
+.about__text:last-child {
+  margin: 0;
+}
+
+@media only screen and (max-width: 425px) {
+  .about__text {
+    margin: 20px 0 16px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about__text {
+    margin: 40px 0 18px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .about__text {
+    margin: 45px 0 20px;
+  }
+}

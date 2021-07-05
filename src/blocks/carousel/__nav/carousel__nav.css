@@ -1,0 +1,18 @@
+.carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel__nav {
+    margin-top: 21px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__nav {
+    margin-top: 17px;
+  }
+}

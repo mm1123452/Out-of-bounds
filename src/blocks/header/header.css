@@ -1,0 +1,58 @@
+@import url(./__button/header__button.css);
+@import url(./__button/_type/header__button_type_exit.css);
+@import url(./__button/_type/header__button_type_menu.css);
+@import url(./__links/header__links.css);
+@import url(./__links/_place/header__links_place_side-menu.css);
+@import url(./__link/header__link.css);
+@import url(./__link/_border/header__link_border.css);
+@import url(./__side-menu/header__side-menu.css);
+@import url(./__side-menu/_show/header__side-menu_show.css);
+
+.header {
+  background-color: #223d46;
+  padding: 0 30px;
+  height: 525px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 35px solid #429a6b;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url(../../images/phone-header-bg.png);
+}
+
+@media (min-width: 425px) {
+  .header {
+    background-image: url(../../images/tablet-header-bg.png);
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 750px;
+    border-bottom: 50px solid #429a6b;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 530px;
+    border-bottom: 40px solid #429a6b;
+    background-image: url(../../images/desktop-header-bg.png);
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    height: 650px;
+    border-bottom: 50px solid #429a6b;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    height: 740px;
+    padding: 0 120px;
+  }
+}
